@@ -1,0 +1,1976 @@
+{
+  "format": "action_parser_compatibility_catalog_v1",
+  "tasks": [
+    {
+      "id": "cleaning",
+      "name_zh": "cleaning",
+      "objects": [
+        "carpet",
+        "wood_floor",
+        "tile_floor",
+        "marble_floor",
+        "laminate_floor",
+        "vinyl_floor",
+        "robot_vacuum",
+        "cup",
+        "mug",
+        "bowl",
+        "plate",
+        "spoon",
+        "fork",
+        "knife",
+        "pot",
+        "toilet",
+        "sink",
+        "bathtub",
+        "shower",
+        "mirror",
+        "bathroom_floor",
+        "faucet",
+        "soap"
+      ]
+    },
+    {
+      "id": "organizing",
+      "name_zh": "organizing",
+      "objects": [
+        "storage_box",
+        "bookshelf",
+        "wardrobe",
+        "drawer",
+        "cabinet",
+        "desk",
+        "coffee_table",
+        "toy"
+      ]
+    },
+    {
+      "id": "smart_cooking",
+      "name_zh": "smart_cooking",
+      "objects": [
+        "rice_cooker",
+        "induction_cooker",
+        "oven",
+        "microwave",
+        "frying_pan",
+        "electric_kettle",
+        "blender",
+        "pressure_cooker"
+      ]
+    },
+    {
+      "id": "appliance_management",
+      "name_zh": "appliance_management",
+      "objects": [
+        "ceiling_light",
+        "reading_lamp",
+        "television",
+        "air_conditioner",
+        "refrigerator",
+        "washing_machine",
+        "electric_curtain",
+        "fan",
+        "remote_control"
+      ]
+    },
+    {
+      "id": "security_monitoring",
+      "name_zh": "security_monitoring",
+      "objects": [
+        "smart_lock",
+        "security_camera",
+        "fire_alarm",
+        "fire_extinguisher",
+        "doorknob",
+        "padlock",
+        "doorbell_button",
+        "video_doorbell"
+      ]
+    },
+    {
+      "id": "laundry",
+      "name_zh": "laundry",
+      "objects": [
+        "child_clothing",
+        "shoes",
+        "cotton_coat",
+        "down_jacket",
+        "wool_garment",
+        "shirt",
+        "pants",
+        "towel"
+      ]
+    },
+    {
+      "id": "waste_disposal",
+      "name_zh": "waste_disposal",
+      "objects": [
+        "trash_bin",
+        "recyclable_bottle",
+        "food",
+        "plastic_bag",
+        "cardboard_box",
+        "aluminum_can",
+        "glass_bottle",
+        "battery"
+      ]
+    },
+    {
+      "id": "clothing_care",
+      "name_zh": "clothing_care",
+      "objects": [
+        "dress",
+        "suit",
+        "sweater",
+        "skirt",
+        "socks",
+        "scarf",
+        "bed_sheet",
+        "iron"
+      ]
+    },
+    {
+      "id": "window_care",
+      "name_zh": "window_care",
+      "objects": [
+        "window",
+        "window_glass",
+        "window_frame",
+        "curtain",
+        "blind",
+        "screen_window",
+        "balcony_railing",
+        "window_sill"
+      ]
+    },
+    {
+      "id": "bedroom_service",
+      "name_zh": "bedroom_service",
+      "objects": [
+        "bed",
+        "pillow",
+        "quilt",
+        "mattress",
+        "nightstand",
+        "bedroom_lamp",
+        "clothes_hanger",
+        "laundry_basket"
+      ]
+    },
+    {
+      "id": "food_serving",
+      "name_zh": "food_serving",
+      "objects": [
+        "water_cup",
+        "wine_glass",
+        "bottle",
+        "food_tray",
+        "dinner_plate",
+        "serving_bowl",
+        "chopsticks",
+        "thermos"
+      ]
+    },
+    {
+      "id": "object_fetching",
+      "name_zh": "object_fetching",
+      "objects": [
+        "remote_control",
+        "mobile_phone",
+        "laptop",
+        "book",
+        "spectacles",
+        "walking_cane",
+        "keys",
+        "wallet"
+      ]
+    },
+    {
+      "id": "elderly_assistance",
+      "name_zh": "elderly_assistance",
+      "objects": [
+        "blood_pressure_monitor",
+        "thermometer",
+        "bandage",
+        "first_aid_kit",
+        "wheelchair",
+        "sanitary_pad",
+        "medical_mask",
+        "medical_glove"
+      ]
+    },
+    {
+      "id": "maintenance_management",
+      "name_zh": "maintenance_management",
+      "objects": [
+        "robot_vacuum",
+        "fire_alarm",
+        "washing_machine",
+        "air_conditioner",
+        "refrigerator",
+        "fan",
+        "electric_curtain",
+        "smart_lock",
+        "flower_pot",
+        "watering_can"
+      ]
+    },
+    {
+      "id": "entertainment_service",
+      "name_zh": "entertainment_service",
+      "objects": [
+        "remote_control",
+        "television",
+        "laptop",
+        "book",
+        "mobile_phone",
+        "toy",
+        "game_controller",
+        "speaker"
+      ]
+    }
+  ],
+  "acceptance_tasks": [
+    {
+      "id": "cleaning",
+      "name_zh": "cleaning"
+    },
+    {
+      "id": "organizing",
+      "name_zh": "organizing"
+    },
+    {
+      "id": "smart_cooking",
+      "name_zh": "smart_cooking"
+    },
+    {
+      "id": "appliance_management",
+      "name_zh": "appliance_management"
+    },
+    {
+      "id": "security_monitoring",
+      "name_zh": "security_monitoring"
+    },
+    {
+      "id": "laundry",
+      "name_zh": "laundry"
+    },
+    {
+      "id": "waste_disposal",
+      "name_zh": "waste_disposal"
+    },
+    {
+      "id": "clothing_care",
+      "name_zh": "clothing_care"
+    },
+    {
+      "id": "window_care",
+      "name_zh": "window_care"
+    },
+    {
+      "id": "bedroom_service",
+      "name_zh": "bedroom_service"
+    },
+    {
+      "id": "food_serving",
+      "name_zh": "food_serving"
+    },
+    {
+      "id": "object_fetching",
+      "name_zh": "object_fetching"
+    },
+    {
+      "id": "elderly_assistance",
+      "name_zh": "elderly_assistance"
+    },
+    {
+      "id": "maintenance_management",
+      "name_zh": "maintenance_management"
+    },
+    {
+      "id": "entertainment_service",
+      "name_zh": "entertainment_service"
+    }
+  ],
+  "vla_tasks": [
+    {
+      "id": "indoor_cleaning",
+      "name_zh": "室内卫生清洁"
+    },
+    {
+      "id": "cooking_heating",
+      "name_zh": "烹饪与加热辅助"
+    },
+    {
+      "id": "item_delivery",
+      "name_zh": "物品递送"
+    },
+    {
+      "id": "organizing_storage",
+      "name_zh": "整理收纳"
+    },
+    {
+      "id": "storage_open_close",
+      "name_zh": "储物设施开合"
+    },
+    {
+      "id": "indoor_installation",
+      "name_zh": "室内安装与布置"
+    },
+    {
+      "id": "tableware_placement",
+      "name_zh": "餐具与容器摆放"
+    },
+    {
+      "id": "clothing_entryway",
+      "name_zh": "衣物鞋类与玄关归位"
+    },
+    {
+      "id": "workspace_service",
+      "name_zh": "工作学习区服务"
+    },
+    {
+      "id": "bathroom_personal_care",
+      "name_zh": "卫浴用品与个人卫生服务"
+    }
+  ],
+  "vla_objects": [
+    {
+      "task_id": "indoor_cleaning",
+      "object_id": "vla_001",
+      "object_name_zh": "垃圾桶",
+      "source_operation_label": "多罐汽水投放：客厅→厨房垃圾桶",
+      "match_keywords": [
+        "垃圾桶",
+        "多罐汽水投放",
+        "客厅",
+        "厨房垃圾桶"
+      ],
+      "steps": [
+        "拿起汽水罐",
+        "移动至厨房垃圾桶",
+        "投放汽水罐",
+        "确认已放入"
+      ],
+      "source_row": {
+        "sheet": "表5-8-1",
+        "row": 5
+      }
+    },
+    {
+      "task_id": "indoor_cleaning",
+      "object_id": "vla_002",
+      "object_name_zh": "海绵",
+      "source_operation_label": "海绵取放：台面→橱柜",
+      "match_keywords": [
+        "海绵",
+        "海绵取放",
+        "台面",
+        "橱柜"
+      ],
+      "steps": [
+        "定位海绵",
+        "执行海绵取放：台面→橱柜",
+        "确认海绵操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-1",
+        "row": 6
+      }
+    },
+    {
+      "task_id": "indoor_cleaning",
+      "object_id": "vla_003",
+      "object_name_zh": "清洁刷",
+      "source_operation_label": "洗碗刷取放：橱柜→台面",
+      "match_keywords": [
+        "清洁刷",
+        "洗碗刷取放",
+        "橱柜",
+        "台面"
+      ],
+      "steps": [
+        "定位清洁刷",
+        "执行洗碗刷取放：橱柜→台面",
+        "确认清洁刷操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-1",
+        "row": 7
+      }
+    },
+    {
+      "task_id": "indoor_cleaning",
+      "object_id": "vla_004",
+      "object_name_zh": "清洁喷雾瓶",
+      "source_operation_label": "喷雾瓶取放：橱柜→台面",
+      "match_keywords": [
+        "清洁喷雾瓶",
+        "喷雾瓶取放",
+        "橱柜",
+        "台面"
+      ],
+      "steps": [
+        "定位清洁喷雾瓶",
+        "执行喷雾瓶取放：橱柜→台面",
+        "确认清洁喷雾瓶操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-1",
+        "row": 8
+      }
+    },
+    {
+      "task_id": "indoor_cleaning",
+      "object_id": "vla_005",
+      "object_name_zh": "饮料罐",
+      "source_operation_label": "多罐汽水投放：客厅→厨房垃圾桶",
+      "match_keywords": [
+        "饮料罐",
+        "多罐汽水投放",
+        "客厅",
+        "厨房垃圾桶"
+      ],
+      "steps": [
+        "拿起汽水罐",
+        "移动至厨房垃圾桶",
+        "投放汽水罐",
+        "确认已放入"
+      ],
+      "source_row": {
+        "sheet": "表5-8-1",
+        "row": 9
+      }
+    },
+    {
+      "task_id": "cooking_heating",
+      "object_id": "vla_006",
+      "object_name_zh": "削皮刀",
+      "source_operation_label": "洋葱切丁：水槽→砧板→碗，刀具与砧板回放水槽",
+      "match_keywords": [
+        "削皮刀",
+        "洋葱切丁",
+        "水槽",
+        "砧板",
+        "刀具与砧板回放水槽"
+      ],
+      "steps": [
+        "定位削皮刀",
+        "执行洋葱切丁：水槽→砧板→碗，刀具与砧板回放水槽",
+        "确认削皮刀操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-2",
+        "row": 5
+      }
+    },
+    {
+      "task_id": "cooking_heating",
+      "object_id": "vla_007",
+      "object_name_zh": "平底锅",
+      "source_operation_label": "卷心菜和辣椒切丁并在炉灶平底锅中烹调",
+      "match_keywords": [
+        "平底锅",
+        "卷心菜和辣椒切丁并在炉灶平底锅中烹调"
+      ],
+      "steps": [
+        "定位平底锅",
+        "执行卷心菜和辣椒切丁并在炉灶平底锅中烹调",
+        "确认平底锅操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-2",
+        "row": 6
+      }
+    },
+    {
+      "task_id": "cooking_heating",
+      "object_id": "vla_008",
+      "object_name_zh": "打蛋器",
+      "source_operation_label": "台面→抽屉单件归位",
+      "match_keywords": [
+        "打蛋器",
+        "台面",
+        "抽屉单件归位"
+      ],
+      "steps": [
+        "定位打蛋器",
+        "执行台面→抽屉单件归位",
+        "确认打蛋器操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-2",
+        "row": 7
+      }
+    },
+    {
+      "task_id": "cooking_heating",
+      "object_id": "vla_009",
+      "object_name_zh": "擀面杖",
+      "source_operation_label": "台面→抽屉单件归位",
+      "match_keywords": [
+        "擀面杖",
+        "台面",
+        "抽屉单件归位"
+      ],
+      "steps": [
+        "定位擀面杖",
+        "执行台面→抽屉单件归位",
+        "确认擀面杖操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-2",
+        "row": 8
+      }
+    },
+    {
+      "task_id": "cooking_heating",
+      "object_id": "vla_010",
+      "object_name_zh": "混合碗",
+      "source_operation_label": "按蔬菜类别分入三个混合碗",
+      "match_keywords": [
+        "混合碗",
+        "按蔬菜类别分入三个混合碗"
+      ],
+      "steps": [
+        "定位混合碗",
+        "执行按蔬菜类别分入三个混合碗",
+        "确认混合碗操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-2",
+        "row": 9
+      }
+    },
+    {
+      "task_id": "cooking_heating",
+      "object_id": "vla_011",
+      "object_name_zh": "炉灶",
+      "source_operation_label": "导航至厨房炉灶",
+      "match_keywords": [
+        "炉灶",
+        "导航至厨房炉灶"
+      ],
+      "steps": [
+        "定位炉灶",
+        "执行导航至厨房炉灶",
+        "确认炉灶操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-2",
+        "row": 10
+      }
+    },
+    {
+      "task_id": "cooking_heating",
+      "object_id": "vla_012",
+      "object_name_zh": "烤箱",
+      "source_operation_label": "关闭烤箱门",
+      "match_keywords": [
+        "烤箱",
+        "关闭烤箱门"
+      ],
+      "steps": [
+        "定位烤箱",
+        "执行关闭烤箱",
+        "确认烤箱已关闭"
+      ],
+      "source_row": {
+        "sheet": "表5-8-2",
+        "row": 11
+      }
+    },
+    {
+      "task_id": "cooking_heating",
+      "object_id": "vla_013",
+      "object_name_zh": "烤面包机下层烤盘",
+      "source_operation_label": "将烤箱下层烤盘完全推入",
+      "match_keywords": [
+        "烤面包机下层烤盘",
+        "将烤箱下层烤盘完全推入"
+      ],
+      "steps": [
+        "定位烤面包机下层烤盘",
+        "执行将烤箱下层烤盘完全推入",
+        "确认烤面包机下层烤盘操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-2",
+        "row": 12
+      }
+    },
+    {
+      "task_id": "cooking_heating",
+      "object_id": "vla_014",
+      "object_name_zh": "烹饪托盘",
+      "source_operation_label": "将烤箱上层托盘完全拉出",
+      "match_keywords": [
+        "烹饪托盘",
+        "将烤箱上层托盘完全拉出"
+      ],
+      "steps": [
+        "定位烹饪托盘",
+        "执行将烤箱上层托盘完全拉出",
+        "确认烹饪托盘操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-2",
+        "row": 13
+      }
+    },
+    {
+      "task_id": "cooking_heating",
+      "object_id": "vla_015",
+      "object_name_zh": "玻璃罐",
+      "source_operation_label": "开柜、开罐、放入熟香肠、关罐并归回",
+      "match_keywords": [
+        "玻璃罐",
+        "开柜、开罐、放入熟香肠、关罐并归回"
+      ],
+      "steps": [
+        "定位玻璃罐",
+        "执行开柜、开罐、放入熟香肠、关罐并归回",
+        "确认玻璃罐操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-2",
+        "row": 14
+      }
+    },
+    {
+      "task_id": "cooking_heating",
+      "object_id": "vla_016",
+      "object_name_zh": "砧板",
+      "source_operation_label": "洋葱切丁：水槽→砧板→碗，刀具与砧板回放水槽",
+      "match_keywords": [
+        "砧板",
+        "洋葱切丁",
+        "水槽",
+        "砧板",
+        "刀具与砧板回放水槽"
+      ],
+      "steps": [
+        "定位砧板",
+        "执行洋葱切丁：水槽→砧板→碗，刀具与砧板回放水槽",
+        "确认砧板操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-2",
+        "row": 15
+      }
+    },
+    {
+      "task_id": "cooking_heating",
+      "object_id": "vla_017",
+      "object_name_zh": "碗",
+      "source_operation_label": "苹果：平底锅→碗",
+      "match_keywords": [
+        "碗",
+        "苹果",
+        "平底锅"
+      ],
+      "steps": [
+        "定位碗",
+        "执行苹果：平底锅→碗",
+        "确认碗操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-2",
+        "row": 16
+      }
+    },
+    {
+      "task_id": "cooking_heating",
+      "object_id": "vla_018",
+      "object_name_zh": "茶壶",
+      "source_operation_label": "台面→橱柜单件归位",
+      "match_keywords": [
+        "茶壶",
+        "台面",
+        "橱柜单件归位"
+      ],
+      "steps": [
+        "定位茶壶",
+        "执行台面→橱柜单件归位",
+        "确认茶壶操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-2",
+        "row": 17
+      }
+    },
+    {
+      "task_id": "cooking_heating",
+      "object_id": "vla_019",
+      "object_name_zh": "调味罐",
+      "source_operation_label": "台面→橱柜单件归位",
+      "match_keywords": [
+        "调味罐",
+        "台面",
+        "橱柜单件归位"
+      ],
+      "steps": [
+        "定位调味罐",
+        "执行台面→橱柜单件归位",
+        "确认调味罐操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-2",
+        "row": 18
+      }
+    },
+    {
+      "task_id": "cooking_heating",
+      "object_id": "vla_020",
+      "object_name_zh": "量杯",
+      "source_operation_label": "台面→抽屉单件归位",
+      "match_keywords": [
+        "量杯",
+        "台面",
+        "抽屉单件归位"
+      ],
+      "steps": [
+        "定位量杯",
+        "执行台面→抽屉单件归位",
+        "确认量杯操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-2",
+        "row": 19
+      }
+    },
+    {
+      "task_id": "cooking_heating",
+      "object_id": "vla_021",
+      "object_name_zh": "锅",
+      "source_operation_label": "台面→橱柜单件归位",
+      "match_keywords": [
+        "锅",
+        "台面",
+        "橱柜单件归位"
+      ],
+      "steps": [
+        "定位锅",
+        "执行台面→橱柜单件归位",
+        "确认锅操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-2",
+        "row": 20
+      }
+    },
+    {
+      "task_id": "cooking_heating",
+      "object_id": "vla_022",
+      "object_name_zh": "餐刀",
+      "source_operation_label": "洋葱切丁：水槽→砧板→碗，刀具与砧板回放水槽",
+      "match_keywords": [
+        "餐刀",
+        "洋葱切丁",
+        "水槽",
+        "砧板",
+        "刀具与砧板回放水槽"
+      ],
+      "steps": [
+        "定位餐刀",
+        "执行洋葱切丁：水槽→砧板→碗，刀具与砧板回放水槽",
+        "确认餐刀操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-2",
+        "row": 21
+      }
+    },
+    {
+      "task_id": "item_delivery",
+      "object_id": "vla_023",
+      "object_name_zh": "书籍",
+      "source_operation_label": "书籍：床上→床头柜；两只凉鞋并排放在床边",
+      "match_keywords": [
+        "书籍",
+        "书籍",
+        "床上",
+        "床头柜；两只凉鞋并排放在床边"
+      ],
+      "steps": [
+        "定位书籍",
+        "执行书籍：床上→床头柜；两只凉鞋并排放在床边",
+        "确认书籍操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-4",
+        "row": 5
+      }
+    },
+    {
+      "task_id": "item_delivery",
+      "object_id": "vla_024",
+      "object_name_zh": "水瓶",
+      "source_operation_label": "水瓶：橱柜→台面",
+      "match_keywords": [
+        "水瓶",
+        "水瓶",
+        "橱柜",
+        "台面"
+      ],
+      "steps": [
+        "定位水瓶",
+        "执行水瓶：橱柜→台面",
+        "确认水瓶操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-4",
+        "row": 6
+      }
+    },
+    {
+      "task_id": "item_delivery",
+      "object_id": "vla_025",
+      "object_name_zh": "盒装饮料",
+      "source_operation_label": "盒装饮料：橱柜→台面",
+      "match_keywords": [
+        "盒装饮料",
+        "盒装饮料",
+        "橱柜",
+        "台面"
+      ],
+      "steps": [
+        "定位盒装饮料",
+        "执行盒装饮料：橱柜→台面",
+        "确认盒装饮料操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-4",
+        "row": 7
+      }
+    },
+    {
+      "task_id": "item_delivery",
+      "object_id": "vla_026",
+      "object_name_zh": "罐装物",
+      "source_operation_label": "罐装物：橱柜→台面",
+      "match_keywords": [
+        "罐装物",
+        "罐装物",
+        "橱柜",
+        "台面"
+      ],
+      "steps": [
+        "定位罐装物",
+        "执行罐装物：橱柜→台面",
+        "确认罐装物操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-4",
+        "row": 8
+      }
+    },
+    {
+      "task_id": "item_delivery",
+      "object_id": "vla_027",
+      "object_name_zh": "饮料瓶",
+      "source_operation_label": "两瓶饮料：厨房冰箱→客厅咖啡台，完成后关冰箱",
+      "match_keywords": [
+        "饮料瓶",
+        "两瓶饮料",
+        "厨房冰箱",
+        "客厅咖啡台",
+        "完成后关冰箱"
+      ],
+      "steps": [
+        "定位饮料瓶",
+        "执行两瓶饮料：厨房冰箱→客厅咖啡台，完成后关冰箱",
+        "确认饮料瓶操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-4",
+        "row": 9
+      }
+    },
+    {
+      "task_id": "item_delivery",
+      "object_id": "vla_028",
+      "object_name_zh": "马克杯",
+      "source_operation_label": "马克杯：橱柜→台面",
+      "match_keywords": [
+        "马克杯",
+        "马克杯",
+        "橱柜",
+        "台面"
+      ],
+      "steps": [
+        "定位马克杯",
+        "执行马克杯：橱柜→台面",
+        "确认马克杯操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-4",
+        "row": 10
+      }
+    },
+    {
+      "task_id": "organizing_storage",
+      "object_id": "vla_029",
+      "object_name_zh": "密封保鲜盒",
+      "source_operation_label": "密封保鲜盒：台面→橱柜",
+      "match_keywords": [
+        "密封保鲜盒",
+        "密封保鲜盒",
+        "台面",
+        "橱柜"
+      ],
+      "steps": [
+        "定位密封保鲜盒",
+        "执行密封保鲜盒：台面→橱柜",
+        "确认密封保鲜盒操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-5",
+        "row": 5
+      }
+    },
+    {
+      "task_id": "organizing_storage",
+      "object_id": "vla_030",
+      "object_name_zh": "床头柜",
+      "source_operation_label": "书籍：床→床头柜，凉鞋并排放置",
+      "match_keywords": [
+        "床头柜",
+        "书籍",
+        "床头柜",
+        "凉鞋并排放置"
+      ],
+      "steps": [
+        "定位床头柜",
+        "执行书籍：床→床头柜，凉鞋并排放置",
+        "确认床头柜操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-5",
+        "row": 6
+      }
+    },
+    {
+      "task_id": "organizing_storage",
+      "object_id": "vla_031",
+      "object_name_zh": "收纳盒",
+      "source_operation_label": "盒装饮料：台面→橱柜",
+      "match_keywords": [
+        "收纳盒",
+        "盒装饮料",
+        "台面",
+        "橱柜"
+      ],
+      "steps": [
+        "定位收纳盒",
+        "执行盒装饮料：台面→橱柜",
+        "确认收纳盒操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-5",
+        "row": 7
+      }
+    },
+    {
+      "task_id": "organizing_storage",
+      "object_id": "vla_032",
+      "object_name_zh": "收纳箱",
+      "source_operation_label": "六本书：书架→客厅地面收纳箱",
+      "match_keywords": [
+        "收纳箱",
+        "六本书",
+        "书架",
+        "客厅地面收纳箱"
+      ],
+      "steps": [
+        "定位收纳箱",
+        "执行六本书：书架→客厅地面收纳箱",
+        "确认收纳箱操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-5",
+        "row": 8
+      }
+    },
+    {
+      "task_id": "organizing_storage",
+      "object_id": "vla_033",
+      "object_name_zh": "收纳篮",
+      "source_operation_label": "卧室篮中物品分类归位至浴室指定区域",
+      "match_keywords": [
+        "收纳篮",
+        "卧室篮中物品分类归位至浴室指定区域"
+      ],
+      "steps": [
+        "定位收纳篮",
+        "执行卧室篮中物品分类归位至浴室指定区域",
+        "确认收纳篮操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-5",
+        "row": 9
+      }
+    },
+    {
+      "task_id": "organizing_storage",
+      "object_id": "vla_034",
+      "object_name_zh": "纸箱",
+      "source_operation_label": "六本书：书架→客厅地面纸箱",
+      "match_keywords": [
+        "纸箱",
+        "六本书",
+        "书架",
+        "客厅地面纸箱"
+      ],
+      "steps": [
+        "定位纸箱",
+        "执行六本书：书架→客厅地面纸箱",
+        "确认纸箱操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-5",
+        "row": 10
+      }
+    },
+    {
+      "task_id": "storage_open_close",
+      "object_id": "vla_035",
+      "object_name_zh": "冰箱层架",
+      "source_operation_label": "苹果：冰箱抽屉→冰箱层架",
+      "match_keywords": [
+        "冰箱层架",
+        "苹果",
+        "冰箱抽屉",
+        "冰箱层架"
+      ],
+      "steps": [
+        "定位冰箱层架",
+        "执行苹果：冰箱抽屉→冰箱层架",
+        "确认冰箱层架操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-6",
+        "row": 5
+      }
+    },
+    {
+      "task_id": "storage_open_close",
+      "object_id": "vla_036",
+      "object_name_zh": "冰箱抽屉",
+      "source_operation_label": "完全关闭冰箱抽屉",
+      "match_keywords": [
+        "冰箱抽屉",
+        "完全关闭冰箱抽屉"
+      ],
+      "steps": [
+        "定位冰箱抽屉",
+        "执行关闭冰箱抽屉",
+        "确认冰箱抽屉已关闭"
+      ],
+      "source_row": {
+        "sheet": "表5-8-6",
+        "row": 6
+      }
+    },
+    {
+      "task_id": "storage_open_close",
+      "object_id": "vla_037",
+      "object_name_zh": "冰箱门",
+      "source_operation_label": "关闭冰箱门",
+      "match_keywords": [
+        "冰箱门",
+        "关闭冰箱门"
+      ],
+      "steps": [
+        "定位冰箱门",
+        "执行关闭冰箱门",
+        "确认冰箱门已关闭"
+      ],
+      "source_row": {
+        "sheet": "表5-8-6",
+        "row": 7
+      }
+    },
+    {
+      "task_id": "storage_open_close",
+      "object_id": "vla_038",
+      "object_name_zh": "微波炉门",
+      "source_operation_label": "关闭微波炉门",
+      "match_keywords": [
+        "微波炉门",
+        "关闭微波炉门"
+      ],
+      "steps": [
+        "定位微波炉门",
+        "执行关闭微波炉门",
+        "确认微波炉门已关闭"
+      ],
+      "source_row": {
+        "sheet": "表5-8-6",
+        "row": 8
+      }
+    },
+    {
+      "task_id": "storage_open_close",
+      "object_id": "vla_039",
+      "object_name_zh": "抽屉",
+      "source_operation_label": "关闭左侧抽屉",
+      "match_keywords": [
+        "抽屉",
+        "关闭左侧抽屉"
+      ],
+      "steps": [
+        "定位抽屉",
+        "执行关闭抽屉",
+        "确认抽屉已关闭"
+      ],
+      "source_row": {
+        "sheet": "表5-8-6",
+        "row": 9
+      }
+    },
+    {
+      "task_id": "storage_open_close",
+      "object_id": "vla_040",
+      "object_name_zh": "橱柜门",
+      "source_operation_label": "关闭橱柜门",
+      "match_keywords": [
+        "橱柜门",
+        "关闭橱柜门"
+      ],
+      "steps": [
+        "定位橱柜门",
+        "执行关闭橱柜门",
+        "确认橱柜门已关闭"
+      ],
+      "source_row": {
+        "sheet": "表5-8-6",
+        "row": 10
+      }
+    },
+    {
+      "task_id": "storage_open_close",
+      "object_id": "vla_041",
+      "object_name_zh": "洗碗机上层架",
+      "source_operation_label": "将洗碗机上层架完全推入",
+      "match_keywords": [
+        "洗碗机上层架",
+        "将洗碗机上层架完全推入"
+      ],
+      "steps": [
+        "定位洗碗机上层架",
+        "执行将洗碗机上层架完全推入",
+        "确认洗碗机上层架操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-6",
+        "row": 11
+      }
+    },
+    {
+      "task_id": "storage_open_close",
+      "object_id": "vla_042",
+      "object_name_zh": "洗碗机门",
+      "source_operation_label": "关闭洗碗机门",
+      "match_keywords": [
+        "洗碗机门",
+        "关闭洗碗机门"
+      ],
+      "steps": [
+        "定位洗碗机门",
+        "执行关闭洗碗机门",
+        "确认洗碗机门已关闭"
+      ],
+      "source_row": {
+        "sheet": "表5-8-6",
+        "row": 12
+      }
+    },
+    {
+      "task_id": "storage_open_close",
+      "object_id": "vla_043",
+      "object_name_zh": "烤箱门",
+      "source_operation_label": "关闭烤箱门",
+      "match_keywords": [
+        "烤箱门",
+        "关闭烤箱门"
+      ],
+      "steps": [
+        "定位烤箱门",
+        "执行关闭烤箱门",
+        "确认烤箱门已关闭"
+      ],
+      "source_row": {
+        "sheet": "表5-8-6",
+        "row": 13
+      }
+    },
+    {
+      "task_id": "storage_open_close",
+      "object_id": "vla_044",
+      "object_name_zh": "烤面包机烤箱门",
+      "source_operation_label": "打开烤面包机烤箱门",
+      "match_keywords": [
+        "烤面包机烤箱门",
+        "打开烤面包机烤箱门"
+      ],
+      "steps": [
+        "定位烤面包机烤箱门",
+        "执行打开烤面包机烤箱门",
+        "确认烤面包机烤箱门已打开"
+      ],
+      "source_row": {
+        "sheet": "表5-8-6",
+        "row": 14
+      }
+    },
+    {
+      "task_id": "indoor_installation",
+      "object_id": "vla_045",
+      "object_name_zh": "墙钉",
+      "source_operation_label": "海报悬挂到厨房墙钉",
+      "match_keywords": [
+        "墙钉",
+        "海报悬挂到厨房墙钉"
+      ],
+      "steps": [
+        "定位墙钉",
+        "执行海报悬挂到厨房墙钉",
+        "确认墙钉操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-7",
+        "row": 5
+      }
+    },
+    {
+      "task_id": "indoor_installation",
+      "object_id": "vla_046",
+      "object_name_zh": "数码相机",
+      "source_operation_label": "数码相机安装到卧室三脚架",
+      "match_keywords": [
+        "数码相机",
+        "数码相机安装到卧室三脚架"
+      ],
+      "steps": [
+        "定位数码相机",
+        "执行数码相机安装到卧室三脚架",
+        "确认数码相机操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-7",
+        "row": 6
+      }
+    },
+    {
+      "task_id": "indoor_installation",
+      "object_id": "vla_047",
+      "object_name_zh": "海报",
+      "source_operation_label": "厨房台面海报→墙钉悬挂",
+      "match_keywords": [
+        "海报",
+        "厨房台面海报",
+        "墙钉悬挂"
+      ],
+      "steps": [
+        "定位海报",
+        "执行厨房台面海报→墙钉悬挂",
+        "确认海报操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-7",
+        "row": 7
+      }
+    },
+    {
+      "task_id": "indoor_installation",
+      "object_id": "vla_048",
+      "object_name_zh": "相机三脚架",
+      "source_operation_label": "接收并支撑数码相机",
+      "match_keywords": [
+        "相机三脚架",
+        "接收并支撑数码相机"
+      ],
+      "steps": [
+        "定位相机三脚架",
+        "执行接收并支撑数码相机",
+        "确认相机三脚架操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-7",
+        "row": 8
+      }
+    },
+    {
+      "task_id": "indoor_installation",
+      "object_id": "vla_049",
+      "object_name_zh": "蜡烛",
+      "source_operation_label": "蜡烛：橱柜→台面",
+      "match_keywords": [
+        "蜡烛",
+        "蜡烛",
+        "橱柜",
+        "台面"
+      ],
+      "steps": [
+        "定位蜡烛",
+        "执行蜡烛：橱柜→台面",
+        "确认蜡烛操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-7",
+        "row": 9
+      }
+    },
+    {
+      "task_id": "tableware_placement",
+      "object_id": "vla_050",
+      "object_name_zh": "咖啡杯",
+      "source_operation_label": "橱柜→台面",
+      "match_keywords": [
+        "咖啡杯",
+        "橱柜",
+        "台面"
+      ],
+      "steps": [
+        "定位咖啡杯",
+        "执行橱柜→台面",
+        "确认咖啡杯操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-8",
+        "row": 5
+      }
+    },
+    {
+      "task_id": "tableware_placement",
+      "object_id": "vla_051",
+      "object_name_zh": "夹子",
+      "source_operation_label": "橱柜→台面",
+      "match_keywords": [
+        "夹子",
+        "橱柜",
+        "台面"
+      ],
+      "steps": [
+        "定位夹子",
+        "执行橱柜→台面",
+        "确认夹子操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-8",
+        "row": 6
+      }
+    },
+    {
+      "task_id": "tableware_placement",
+      "object_id": "vla_052",
+      "object_name_zh": "披萨刀",
+      "source_operation_label": "橱柜→台面",
+      "match_keywords": [
+        "披萨刀",
+        "橱柜",
+        "台面"
+      ],
+      "steps": [
+        "定位披萨刀",
+        "执行橱柜→台面",
+        "确认披萨刀操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-8",
+        "row": 7
+      }
+    },
+    {
+      "task_id": "tableware_placement",
+      "object_id": "vla_053",
+      "object_name_zh": "木勺",
+      "source_operation_label": "台面→橱柜",
+      "match_keywords": [
+        "木勺",
+        "台面",
+        "橱柜"
+      ],
+      "steps": [
+        "定位木勺",
+        "执行台面→橱柜",
+        "确认木勺操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-8",
+        "row": 8
+      }
+    },
+    {
+      "task_id": "tableware_placement",
+      "object_id": "vla_054",
+      "object_name_zh": "水罐",
+      "source_operation_label": "台面→橱柜",
+      "match_keywords": [
+        "水罐",
+        "台面",
+        "橱柜"
+      ],
+      "steps": [
+        "定位水罐",
+        "执行台面→橱柜",
+        "确认水罐操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-8",
+        "row": 9
+      }
+    },
+    {
+      "task_id": "tableware_placement",
+      "object_id": "vla_055",
+      "object_name_zh": "汤勺",
+      "source_operation_label": "台面→橱柜",
+      "match_keywords": [
+        "汤勺",
+        "台面",
+        "橱柜"
+      ],
+      "steps": [
+        "定位汤勺",
+        "执行台面→橱柜",
+        "确认汤勺操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-8",
+        "row": 10
+      }
+    },
+    {
+      "task_id": "tableware_placement",
+      "object_id": "vla_056",
+      "object_name_zh": "洗碗刷",
+      "source_operation_label": "台面→橱柜",
+      "match_keywords": [
+        "洗碗刷",
+        "台面",
+        "橱柜"
+      ],
+      "steps": [
+        "定位洗碗刷",
+        "执行台面→橱柜",
+        "确认洗碗刷操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-8",
+        "row": 11
+      }
+    },
+    {
+      "task_id": "tableware_placement",
+      "object_id": "vla_057",
+      "object_name_zh": "滤盆",
+      "source_operation_label": "台面→橱柜",
+      "match_keywords": [
+        "滤盆",
+        "台面",
+        "橱柜"
+      ],
+      "steps": [
+        "定位滤盆",
+        "执行台面→橱柜",
+        "确认滤盆操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-8",
+        "row": 12
+      }
+    },
+    {
+      "task_id": "tableware_placement",
+      "object_id": "vla_058",
+      "object_name_zh": "盘子",
+      "source_operation_label": "苹果：平底锅→盘子",
+      "match_keywords": [
+        "盘子",
+        "苹果",
+        "平底锅",
+        "盘子"
+      ],
+      "steps": [
+        "定位盘子",
+        "执行苹果：平底锅→盘子",
+        "确认盘子操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-8",
+        "row": 13
+      }
+    },
+    {
+      "task_id": "tableware_placement",
+      "object_id": "vla_059",
+      "object_name_zh": "铝箔纸",
+      "source_operation_label": "台面→橱柜",
+      "match_keywords": [
+        "铝箔纸",
+        "台面",
+        "橱柜"
+      ],
+      "steps": [
+        "定位铝箔纸",
+        "执行台面→橱柜",
+        "确认铝箔纸操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-8",
+        "row": 14
+      }
+    },
+    {
+      "task_id": "clothing_entryway",
+      "object_id": "vla_060",
+      "object_name_zh": "棒球帽",
+      "source_operation_label": "两顶棒球帽：台面→洗衣机清洗",
+      "match_keywords": [
+        "棒球帽",
+        "两顶棒球帽",
+        "台面",
+        "洗衣机清洗"
+      ],
+      "steps": [
+        "定位棒球帽",
+        "执行两顶棒球帽：台面→洗衣机清洗",
+        "确认棒球帽操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-9",
+        "row": 5
+      }
+    },
+    {
+      "task_id": "clothing_entryway",
+      "object_id": "vla_061",
+      "object_name_zh": "毛巾",
+      "source_operation_label": "毛巾分入两个篮子",
+      "match_keywords": [
+        "毛巾",
+        "毛巾分入两个篮子"
+      ],
+      "steps": [
+        "定位毛巾",
+        "执行毛巾分入两个篮子",
+        "确认毛巾操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-9",
+        "row": 6
+      }
+    },
+    {
+      "task_id": "clothing_entryway",
+      "object_id": "vla_062",
+      "object_name_zh": "洗衣机",
+      "source_operation_label": "运行洗衣机清洗两顶棒球帽",
+      "match_keywords": [
+        "洗衣机",
+        "运行洗衣机清洗两顶棒球帽"
+      ],
+      "steps": [
+        "定位洗衣机",
+        "执行运行洗衣机清洗两顶棒球帽",
+        "确认洗衣机操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-9",
+        "row": 7
+      }
+    },
+    {
+      "task_id": "clothing_entryway",
+      "object_id": "vla_063",
+      "object_name_zh": "鞋子",
+      "source_operation_label": "两双运动鞋和两双凉鞋：走廊地面→鞋架并按类别并排",
+      "match_keywords": [
+        "鞋子",
+        "两双运动鞋和两双凉鞋",
+        "走廊地面",
+        "鞋架并按类别并排"
+      ],
+      "steps": [
+        "定位鞋子",
+        "执行两双运动鞋和两双凉鞋：走廊地面→鞋架并按类别并排",
+        "确认鞋子操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-9",
+        "row": 8
+      }
+    },
+    {
+      "task_id": "clothing_entryway",
+      "object_id": "vla_064",
+      "object_name_zh": "鞋架",
+      "source_operation_label": "接收鞋类并保持运动鞋、凉鞋分别并排",
+      "match_keywords": [
+        "鞋架",
+        "接收鞋类并保持运动鞋、凉鞋分别并排"
+      ],
+      "steps": [
+        "定位鞋架",
+        "执行接收鞋类并保持运动鞋、凉鞋分别并排",
+        "确认鞋架操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-9",
+        "row": 9
+      }
+    },
+    {
+      "task_id": "workspace_service",
+      "object_id": "vla_065",
+      "object_name_zh": "办公椅",
+      "source_operation_label": "移至书桌旁",
+      "match_keywords": [
+        "办公椅",
+        "移至书桌旁"
+      ],
+      "steps": [
+        "定位办公椅",
+        "执行移至书桌旁",
+        "确认办公椅操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-10",
+        "row": 5
+      }
+    },
+    {
+      "task_id": "workspace_service",
+      "object_id": "vla_066",
+      "object_name_zh": "文件夹",
+      "source_operation_label": "转椅→书桌并置于鼠标旁",
+      "match_keywords": [
+        "文件夹",
+        "转椅",
+        "书桌并置于鼠标旁"
+      ],
+      "steps": [
+        "定位文件夹",
+        "执行转椅→书桌并置于鼠标旁",
+        "确认文件夹操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-10",
+        "row": 6
+      }
+    },
+    {
+      "task_id": "workspace_service",
+      "object_id": "vla_067",
+      "object_name_zh": "显示器",
+      "source_operation_label": "放在书桌上",
+      "match_keywords": [
+        "显示器",
+        "放在书桌上"
+      ],
+      "steps": [
+        "定位显示器",
+        "执行放在书桌上",
+        "确认显示器操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-10",
+        "row": 7
+      }
+    },
+    {
+      "task_id": "workspace_service",
+      "object_id": "vla_068",
+      "object_name_zh": "电脑",
+      "source_operation_label": "放在书桌下",
+      "match_keywords": [
+        "电脑",
+        "放在书桌下"
+      ],
+      "steps": [
+        "定位电脑",
+        "执行放在书桌下",
+        "确认电脑操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-10",
+        "row": 8
+      }
+    },
+    {
+      "task_id": "workspace_service",
+      "object_id": "vla_069",
+      "object_name_zh": "笔盒",
+      "source_operation_label": "铅笔和两支笔→笔盒，笔盒留在桌面",
+      "match_keywords": [
+        "笔盒",
+        "铅笔和两支笔",
+        "笔盒",
+        "笔盒留在桌面"
+      ],
+      "steps": [
+        "定位笔盒",
+        "执行铅笔和两支笔→笔盒，笔盒留在桌面",
+        "确认笔盒操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-10",
+        "row": 9
+      }
+    },
+    {
+      "task_id": "workspace_service",
+      "object_id": "vla_070",
+      "object_name_zh": "笔记本",
+      "source_operation_label": "叠放在文件夹上",
+      "match_keywords": [
+        "笔记本",
+        "叠放在文件夹上"
+      ],
+      "steps": [
+        "定位笔记本",
+        "执行叠放在文件夹上",
+        "确认笔记本操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-10",
+        "row": 10
+      }
+    },
+    {
+      "task_id": "workspace_service",
+      "object_id": "vla_071",
+      "object_name_zh": "笔记本电脑",
+      "source_operation_label": "床→书桌并合上电脑",
+      "match_keywords": [
+        "笔记本电脑",
+        "书桌并合上电脑"
+      ],
+      "steps": [
+        "定位笔记本电脑",
+        "执行床→书桌并合上电脑",
+        "确认笔记本电脑操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-10",
+        "row": 11
+      }
+    },
+    {
+      "task_id": "workspace_service",
+      "object_id": "vla_072",
+      "object_name_zh": "订书机",
+      "source_operation_label": "书柜→桌面",
+      "match_keywords": [
+        "订书机",
+        "书柜",
+        "桌面"
+      ],
+      "steps": [
+        "定位订书机",
+        "执行书柜→桌面",
+        "确认订书机操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-10",
+        "row": 12
+      }
+    },
+    {
+      "task_id": "workspace_service",
+      "object_id": "vla_073",
+      "object_name_zh": "铅笔",
+      "source_operation_label": "放入笔盒",
+      "match_keywords": [
+        "铅笔",
+        "放入笔盒"
+      ],
+      "steps": [
+        "定位铅笔",
+        "执行放入笔盒",
+        "确认铅笔操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-10",
+        "row": 13
+      }
+    },
+    {
+      "task_id": "workspace_service",
+      "object_id": "vla_074",
+      "object_name_zh": "键盘",
+      "source_operation_label": "放在显示器旁",
+      "match_keywords": [
+        "键盘",
+        "放在显示器旁"
+      ],
+      "steps": [
+        "定位键盘",
+        "执行放在显示器旁",
+        "确认键盘操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-10",
+        "row": 14
+      }
+    },
+    {
+      "task_id": "workspace_service",
+      "object_id": "vla_075",
+      "object_name_zh": "鼠标",
+      "source_operation_label": "放在键盘旁",
+      "match_keywords": [
+        "鼠标",
+        "放在键盘旁"
+      ],
+      "steps": [
+        "定位鼠标",
+        "执行放在键盘旁",
+        "确认鼠标操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-10",
+        "row": 15
+      }
+    },
+    {
+      "task_id": "bathroom_personal_care",
+      "object_id": "vla_076",
+      "object_name_zh": "卫浴搁板",
+      "source_operation_label": "接收卫生巾盒并保持浴室用品分区",
+      "match_keywords": [
+        "卫浴搁板",
+        "接收卫生巾盒并保持浴室用品分区"
+      ],
+      "steps": [
+        "定位卫浴搁板",
+        "执行接收卫生巾盒并保持浴室用品分区",
+        "确认卫浴搁板操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-11",
+        "row": 5
+      }
+    },
+    {
+      "task_id": "bathroom_personal_care",
+      "object_id": "vla_077",
+      "object_name_zh": "卫生巾盒",
+      "source_operation_label": "卧室篮→浴室搁板",
+      "match_keywords": [
+        "卫生巾盒",
+        "卧室篮",
+        "浴室搁板"
+      ],
+      "steps": [
+        "定位卫生巾盒",
+        "执行卧室篮→浴室搁板",
+        "确认卫生巾盒操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-11",
+        "row": 6
+      }
+    },
+    {
+      "task_id": "bathroom_personal_care",
+      "object_id": "vla_078",
+      "object_name_zh": "固体香皂",
+      "source_operation_label": "台面→橱柜",
+      "match_keywords": [
+        "固体香皂",
+        "台面",
+        "橱柜"
+      ],
+      "steps": [
+        "定位固体香皂",
+        "执行台面→橱柜",
+        "确认固体香皂操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-11",
+        "row": 7
+      }
+    },
+    {
+      "task_id": "bathroom_personal_care",
+      "object_id": "vla_079",
+      "object_name_zh": "洗涤剂",
+      "source_operation_label": "卧室篮→洗手池下方并排放置",
+      "match_keywords": [
+        "洗涤剂",
+        "卧室篮",
+        "洗手池下方并排放置"
+      ],
+      "steps": [
+        "定位洗涤剂",
+        "执行卧室篮→洗手池下方并排放置",
+        "确认洗涤剂操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-11",
+        "row": 8
+      }
+    },
+    {
+      "task_id": "bathroom_personal_care",
+      "object_id": "vla_080",
+      "object_name_zh": "牙刷",
+      "source_operation_label": "放入洗手台上的杯中",
+      "match_keywords": [
+        "牙刷",
+        "放入洗手台上的杯中"
+      ],
+      "steps": [
+        "定位牙刷",
+        "执行放入洗手台上的杯中",
+        "确认牙刷操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-11",
+        "row": 9
+      }
+    },
+    {
+      "task_id": "bathroom_personal_care",
+      "object_id": "vla_081",
+      "object_name_zh": "牙膏",
+      "source_operation_label": "放入洗手台上的杯中",
+      "match_keywords": [
+        "牙膏",
+        "放入洗手台上的杯中"
+      ],
+      "steps": [
+        "定位牙膏",
+        "执行放入洗手台上的杯中",
+        "确认牙膏操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-11",
+        "row": 10
+      }
+    },
+    {
+      "task_id": "bathroom_personal_care",
+      "object_id": "vla_082",
+      "object_name_zh": "皂液器",
+      "source_operation_label": "橱柜→台面",
+      "match_keywords": [
+        "皂液器",
+        "橱柜",
+        "台面"
+      ],
+      "steps": [
+        "定位皂液器",
+        "执行橱柜→台面",
+        "确认皂液器操作完成"
+      ],
+      "source_row": {
+        "sheet": "表5-8-11",
+        "row": 11
+      }
+    }
+  ]
+}

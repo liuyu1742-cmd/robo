@@ -1,0 +1,4 @@
+ultralytics==8.4.75
+imageio-ffmpeg==0.6.0
+pyarrow==24.0.0
+huggingface_hub==0.36.2

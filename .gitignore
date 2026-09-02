@@ -1,0 +1,38 @@
+# Python environments and caches
+.venv/
+**/.venv/
+__pycache__/
+**/__pycache__/
+.pytest_cache/
+**/.pytest_cache/
+*.py[cod]
+
+# Local IDE and agent state
+.idea/
+.agents/
+.superpowers/
+**/.superpowers/
+
+# Large datasets, trained models, and local weights
+/downloads/
+/datasets/
+/models/
+/weights/
+/RobotProject/datasets/
+/RobotProject/models/
+/RobotProject/weights/
+
+# Reinstallable JavaScript dependencies
+**/node_modules/
+
+# Generated runtime output and temporary render files
+/outputs/
+/RobotProject/outputs/
+/docx_render/
+/spreadsheet_work/
+*.log
+
+# Credentials and local secrets
+.env
+.env.*
+!.env.example

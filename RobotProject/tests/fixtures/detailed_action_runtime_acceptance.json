@@ -1,0 +1,32 @@
+{
+  "decidable": [
+    {"text": "我准备入睡，卧室环境联动一下", "label": "scene:MDC-033", "kind": "scene"},
+    {"text": "睡眠模式开一下，房间调舒服点", "label": "scene:MDC-033", "kind": "scene"},
+    {"text": "全屋地面做个彻底清洁", "label": "scene:MDC-001", "kind": "scene"},
+    {"text": "早餐给我备上", "label": "scene:MDC-013", "kind": "scene"},
+    {"text": "开始处理晚饭吧", "label": "scene:MDC-015", "kind": "scene"},
+    {"text": "衣服攒多了，安排洗衣", "label": "scene:MDC-028", "kind": "scene"},
+    {"text": "把屋里安全检查一遍", "label": "scene:MDC-040", "kind": "scene"},
+    {"text": "想放松看会电视", "label": "scene:MDC-048", "kind": "scene"},
+    {"text": "进入办公状态，把设备备齐", "label": "scene:MDC-045", "kind": "scene"},
+    {"text": "照料一下阳台上的植物", "label": "scene:MDC-044", "kind": "scene"},
+    {"text": "把碗彻底洗净", "label": "object:original:bowl", "kind": "object"},
+    {"text": "用碗备好早餐食材", "label": "object:vla:vla_017", "kind": "object"},
+    {"text": "把这本书取来给我", "label": "object:original:book", "kind": "object"},
+    {"text": "空调调到凉快些", "label": "object:original:air_conditioner", "kind": "object"},
+    {"text": "把台灯关闭", "label": "object:original:reading_lamp", "kind": "object"},
+    {"text": "给花盆补点水", "label": "object:original:flower_pot", "kind": "object"},
+    {"text": "擦净木地板上的污迹", "label": "object:original:wood_floor", "kind": "object"},
+    {"text": "核验一下灭火器状态", "label": "object:original:fire_extinguisher", "kind": "object"},
+    {"text": "袜子洗护好再晾干", "label": "object:original:socks", "kind": "object"},
+    {"text": "把窗玻璃擦洗透亮", "label": "object:original:window_glass", "kind": "object"}
+  ],
+  "reject": [
+    {"text": "处理一下碗", "reason": "ambiguous"},
+    {"text": "处理一下垃圾桶", "reason": "ambiguous"},
+    {"text": "别打开窗帘", "reason": "negation"},
+    {"text": "不要启动空调", "reason": "negation"},
+    {"text": "帮我写一封电子邮件", "reason": "out_of_domain"},
+    {"text": "量子纠缠是什么意思", "reason": "out_of_domain"}
+  ]
+}

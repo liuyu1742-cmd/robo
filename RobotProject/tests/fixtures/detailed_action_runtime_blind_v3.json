@@ -1,0 +1,4506 @@
+{
+  "format": "detailed_action_runtime_blind_v3",
+  "manifest": {
+    "author": "Codex Task3 Blind v3 independent author/acceptance agent",
+    "blindness": "Phase A did not read or import tools/detailed_action_runtime.py, runtime tests, prior runtime blind fixtures, Task-3 SDD reports/reviews, or implementation test output.",
+    "frozen_at": "2026-08-13T20:05:24+08:00",
+    "timezone": "Asia/Shanghai (UTC+08:00)",
+    "catalog_path": "meta/detailed_action_entry_catalog.json",
+    "catalog_sha256": "d4096b7eab88bce9161b48db2159462c9c7e1ea073dbd2a0c42d69e51c2ef079",
+    "cases_hash_algorithm": "SHA-256 of UTF-8 JSON for the four case arrays, with ensure_ascii=false, sort_keys=true, separators=(',', ':')",
+    "cases_sha256": "32a911a3dc86e14625fb5a86fadd6a4809d9fbd038305b9ee706550c607369b0",
+    "counts": {
+      "scene_cases": 49,
+      "object_cases": 205,
+      "safety_boundary_cases": 112,
+      "model_probe_cases": 16,
+      "all_cases": 382
+    },
+    "safety_group_counts": {
+      "ambiguity": 12,
+      "completed_statement": 12,
+      "incompatible_operation": 12,
+      "information_question": 12,
+      "lexical_nonnegation": 16,
+      "low_confidence": 12,
+      "non_initial_negation": 12,
+      "out_of_domain": 12,
+      "restrictive_negation": 12
+    },
+    "generation_principles": [
+      "Every one of the 49 scene labels has one manually written noncanonical colloquial Chinese instruction.",
+      "Every one of the 205 object labels has one colloquial instruction containing the exact object name plus operation/use evidence appropriate to its catalog task.",
+      "All 14 duplicated Chinese object names are separately disambiguated by label-specific operation/use evidence.",
+      "Safety and boundary cases cover mid-sentence negation, restrictive negation, 不要紧/别墅/差别/告别 lexical boundaries, information questions, completed statements, incompatible operations, ambiguity, out-of-domain text, and low-confidence text.",
+      "No normalized full instruction duplicates a catalog canonical command/action or any Task2 train/dev full text.",
+      "Clarification-required cases forbid all detailed action output; positive lexical-boundary cases require the stated label.",
+      "The model-weight comparison subset is independent of scene/object/safety texts and is built from same-name multi-candidate labels using operation evidence."
+    ],
+    "pre_freeze_checks": {
+      "schema": "PASS",
+      "unique_case_ids": "PASS",
+      "unique_normalized_instructions": "PASS",
+      "scene_label_coverage_49": "PASS",
+      "object_label_coverage_205": "PASS",
+      "object_operation_evidence_205": "PASS",
+      "required_safety_groups": "PASS",
+      "canonical_full_text_overlap_count": 0,
+      "task2_train_dev_full_text_overlap_count": 0
+    }
+  },
+  "scene_cases": [
+    {
+      "id": "SCN-001",
+      "category": "scene",
+      "instruction": "客厅到浴室的地面都脏了，安排一次全屋地面清洁吧。",
+      "expected_label": "scene:MDC-001",
+      "expected_decision": "success",
+      "coverage_key": "MDC-001",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-002",
+      "category": "scene",
+      "instruction": "瓷砖、塑胶板和木地板一起做个日常保洁。",
+      "expected_label": "scene:MDC-002",
+      "expected_decision": "success",
+      "coverage_key": "MDC-002",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-003",
+      "category": "scene",
+      "instruction": "洗漱台这些个人护理用品麻烦分区归整好。",
+      "expected_label": "scene:MDC-003",
+      "expected_decision": "success",
+      "coverage_key": "MDC-003",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-004",
+      "category": "scene",
+      "instruction": "浴缸、水龙头和镜面都收拾得清爽些。",
+      "expected_label": "scene:MDC-004",
+      "expected_decision": "success",
+      "coverage_key": "MDC-004",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-005",
+      "category": "scene",
+      "instruction": "淋浴区、水槽和马桶来一轮彻底清洁。",
+      "expected_label": "scene:MDC-005",
+      "expected_decision": "success",
+      "coverage_key": "MDC-005",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-006",
+      "category": "scene",
+      "instruction": "碗杯刀叉用完了，统统洗净沥好。",
+      "expected_label": "scene:MDC-006",
+      "expected_decision": "success",
+      "coverage_key": "MDC-006",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-007",
+      "category": "scene",
+      "instruction": "吃完饭了，把盘子锅勺一起收拾干净。",
+      "expected_label": "scene:MDC-007",
+      "expected_decision": "success",
+      "coverage_key": "MDC-007",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-008",
+      "category": "scene",
+      "instruction": "把海绵、刷子和喷雾这些清洁家伙备齐。",
+      "expected_label": "scene:MDC-008",
+      "expected_decision": "success",
+      "coverage_key": "MDC-008",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-009",
+      "category": "scene",
+      "instruction": "饮料罐、电池和纸箱按类别扔到对应桶里。",
+      "expected_label": "scene:MDC-009",
+      "expected_decision": "success",
+      "coverage_key": "MDC-009",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-010",
+      "category": "scene",
+      "instruction": "把厨房这些瓶袋和剩余食物分好类收走。",
+      "expected_label": "scene:MDC-010",
+      "expected_decision": "success",
+      "coverage_key": "MDC-010",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-011",
+      "category": "scene",
+      "instruction": "开火前把削皮刀、锅和打蛋工具都备到位。",
+      "expected_label": "scene:MDC-011",
+      "expected_decision": "success",
+      "coverage_key": "MDC-011",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-012",
+      "category": "scene",
+      "instruction": "这顿饭要用的炉灶、烤箱和托盘先安排好。",
+      "expected_label": "scene:MDC-012",
+      "expected_decision": "success",
+      "coverage_key": "MDC-012",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-013",
+      "category": "scene",
+      "instruction": "早饭要开张了，把砧板、碗、茶壶和量杯都备好。",
+      "expected_label": "scene:MDC-013",
+      "expected_decision": "success",
+      "coverage_key": "MDC-013",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-014",
+      "category": "scene",
+      "instruction": "午饭开始准备，锅具、餐刀和热水壶一起就位。",
+      "expected_label": "scene:MDC-014",
+      "expected_decision": "success",
+      "coverage_key": "MDC-014",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-015",
+      "category": "scene",
+      "instruction": "晚饭前把电磁炉、微波炉、烤箱和电饭煲检查好。",
+      "expected_label": "scene:MDC-015",
+      "expected_decision": "success",
+      "coverage_key": "MDC-015",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-016",
+      "category": "scene",
+      "instruction": "开餐前把筷子、餐碟、餐盘和汤碗摆上桌。",
+      "expected_label": "scene:MDC-016",
+      "expected_decision": "success",
+      "coverage_key": "MDC-016",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-017",
+      "category": "scene",
+      "instruction": "把喝水、喝酒、喝咖啡用的杯具一并备好。",
+      "expected_label": "scene:MDC-017",
+      "expected_decision": "success",
+      "coverage_key": "MDC-017",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-018",
+      "category": "scene",
+      "instruction": "水罐和盘子按用餐位置摆到桌上。",
+      "expected_label": "scene:MDC-018",
+      "expected_decision": "success",
+      "coverage_key": "MDC-018",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-019",
+      "category": "scene",
+      "instruction": "夹子、披萨刀、木勺和洗碗刷都整理归位。",
+      "expected_label": "scene:MDC-019",
+      "expected_decision": "success",
+      "coverage_key": "MDC-019",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-020",
+      "category": "scene",
+      "instruction": "滤盆和铝箔纸这两样烹饪用品先备出来。",
+      "expected_label": "scene:MDC-020",
+      "expected_decision": "success",
+      "coverage_key": "MDC-020",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-021",
+      "category": "scene",
+      "instruction": "冰箱里面的层架、抽屉和门都归整检查一下。",
+      "expected_label": "scene:MDC-021",
+      "expected_decision": "success",
+      "coverage_key": "MDC-021",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-022",
+      "category": "scene",
+      "instruction": "逐个检查微波炉、洗碗机和烤箱的门架开合。",
+      "expected_label": "scene:MDC-022",
+      "expected_decision": "success",
+      "coverage_key": "MDC-022",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-023",
+      "category": "scene",
+      "instruction": "厨房抽屉和橱柜门统一整理到位。",
+      "expected_label": "scene:MDC-023",
+      "expected_decision": "success",
+      "coverage_key": "MDC-023",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-024",
+      "category": "scene",
+      "instruction": "把水瓶、盒装饮料和罐装饮品都送到饮料区。",
+      "expected_label": "scene:MDC-024",
+      "expected_decision": "success",
+      "coverage_key": "MDC-024",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-025",
+      "category": "scene",
+      "instruction": "书架、柜子、茶几和书桌上的东西都分类收好。",
+      "expected_label": "scene:MDC-025",
+      "expected_decision": "success",
+      "coverage_key": "MDC-025",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-026",
+      "category": "scene",
+      "instruction": "玩具、衣物和床边杂物一起做个居家收纳。",
+      "expected_label": "scene:MDC-026",
+      "expected_decision": "success",
+      "coverage_key": "MDC-026",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-027",
+      "category": "scene",
+      "instruction": "几个收纳盒、篮子和纸箱统一码放整理。",
+      "expected_label": "scene:MDC-027",
+      "expected_decision": "success",
+      "coverage_key": "MDC-027",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-028",
+      "category": "scene",
+      "instruction": "这一批床单、裙子和围巾准备分洗护理。",
+      "expected_label": "scene:MDC-028",
+      "expected_decision": "success",
+      "coverage_key": "MDC-028",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-029",
+      "category": "scene",
+      "instruction": "短裙、袜子、西装、毛衣和毛巾按材质护理好。",
+      "expected_label": "scene:MDC-029",
+      "expected_decision": "success",
+      "coverage_key": "MDC-029",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-030",
+      "category": "scene",
+      "instruction": "换季衣服要收了，棉衣、羽绒服和裤子分类处理。",
+      "expected_label": "scene:MDC-030",
+      "expected_decision": "success",
+      "coverage_key": "MDC-030",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-031",
+      "category": "scene",
+      "instruction": "衬衫、鞋子、毛巾和羊毛衫按洗护要求打理。",
+      "expected_label": "scene:MDC-031",
+      "expected_decision": "success",
+      "coverage_key": "MDC-031",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-032",
+      "category": "scene",
+      "instruction": "门口的帽子、鞋子和鞋架重新整理顺当。",
+      "expected_label": "scene:MDC-032",
+      "expected_decision": "success",
+      "coverage_key": "MDC-032",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-033",
+      "category": "scene",
+      "instruction": "我准备睡了，把空调、卧室灯和电动窗帘调成睡眠状态。",
+      "expected_label": "scene:MDC-033",
+      "expected_decision": "success",
+      "coverage_key": "MDC-033",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-034",
+      "category": "scene",
+      "instruction": "床、衣架、洗衣篮和床头柜都整理清爽。",
+      "expected_label": "scene:MDC-034",
+      "expected_decision": "success",
+      "coverage_key": "MDC-034",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-035",
+      "category": "scene",
+      "instruction": "枕头和被子铺好，给我弄个舒服的睡眠环境。",
+      "expected_label": "scene:MDC-035",
+      "expected_decision": "success",
+      "coverage_key": "MDC-035",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-036",
+      "category": "scene",
+      "instruction": "百叶、窗帘、纱窗和窗框一起清理维护。",
+      "expected_label": "scene:MDC-036",
+      "expected_decision": "success",
+      "coverage_key": "MDC-036",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-037",
+      "category": "scene",
+      "instruction": "窗玻璃和窗台都查看一下并清洁到位。",
+      "expected_label": "scene:MDC-037",
+      "expected_decision": "success",
+      "coverage_key": "MDC-037",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-038",
+      "category": "scene",
+      "instruction": "吸顶灯和风扇调到舒适的室内状态。",
+      "expected_label": "scene:MDC-038",
+      "expected_decision": "success",
+      "coverage_key": "MDC-038",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-039",
+      "category": "scene",
+      "instruction": "出门前把钥匙、手机、眼镜、拐杖和钱包找齐。",
+      "expected_label": "scene:MDC-039",
+      "expected_decision": "success",
+      "coverage_key": "MDC-039",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-040",
+      "category": "scene",
+      "instruction": "门铃、门把手和消防器材都做一遍安全检查。",
+      "expected_label": "scene:MDC-040",
+      "expected_decision": "success",
+      "coverage_key": "MDC-040",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-041",
+      "category": "scene",
+      "instruction": "摄像头、智能门锁和可视门铃来次安防巡检。",
+      "expected_label": "scene:MDC-041",
+      "expected_decision": "success",
+      "coverage_key": "MDC-041",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-042",
+      "category": "scene",
+      "instruction": "血压计、急救箱、手套和口罩都备好做健康检查。",
+      "expected_label": "scene:MDC-042",
+      "expected_decision": "success",
+      "coverage_key": "MDC-042",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-043",
+      "category": "scene",
+      "instruction": "卫生巾、温度计和轮椅这些护理用品安排到位。",
+      "expected_label": "scene:MDC-043",
+      "expected_decision": "success",
+      "coverage_key": "MDC-043",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-044",
+      "category": "scene",
+      "instruction": "阳台花盆、浇水壶和栏杆一起维护整理。",
+      "expected_label": "scene:MDC-044",
+      "expected_decision": "success",
+      "coverage_key": "MDC-044",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-045",
+      "category": "scene",
+      "instruction": "开工了，把阅读灯、书、本子电脑和办公椅都准备好。",
+      "expected_label": "scene:MDC-045",
+      "expected_decision": "success",
+      "coverage_key": "MDC-045",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-046",
+      "category": "scene",
+      "instruction": "文件夹、显示器、电脑和文具统一收拾好桌面。",
+      "expected_label": "scene:MDC-046",
+      "expected_decision": "success",
+      "coverage_key": "MDC-046",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-047",
+      "category": "scene",
+      "instruction": "上课前把本本、订书机、键盘、鼠标和铅笔备齐。",
+      "expected_label": "scene:MDC-047",
+      "expected_decision": "success",
+      "coverage_key": "MDC-047",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-048",
+      "category": "scene",
+      "instruction": "想放松一下，把电视、音箱和游戏手柄调好。",
+      "expected_label": "scene:MDC-048",
+      "expected_decision": "success",
+      "coverage_key": "MDC-048",
+      "noncanonical": true
+    },
+    {
+      "id": "SCN-049",
+      "category": "scene",
+      "instruction": "墙面海报、相机脚架和蜡烛一起布置妥当。",
+      "expected_label": "scene:MDC-049",
+      "expected_decision": "success",
+      "coverage_key": "MDC-049",
+      "noncanonical": true
+    }
+  ],
+  "object_cases": [
+    {
+      "id": "OBJ-001",
+      "category": "object",
+      "instruction": "麻烦你，按材质把浴室地面彻底清洁一遍，边角和表面残留都复查清楚。",
+      "expected_label": "object:original:bathroom_floor",
+      "expected_decision": "success",
+      "coverage_key": "original:bathroom_floor",
+      "object_name_zh": "浴室地面",
+      "catalog_task": "cleaning",
+      "operation_evidence": [
+        "task_template:cleaning"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-002",
+      "category": "object",
+      "instruction": "现在请按材质把地毯彻底清洁一遍，边角和表面残留都复查清楚。",
+      "expected_label": "object:original:carpet",
+      "expected_decision": "success",
+      "coverage_key": "original:carpet",
+      "object_name_zh": "地毯",
+      "catalog_task": "cleaning",
+      "operation_evidence": [
+        "task_template:cleaning"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-003",
+      "category": "object",
+      "instruction": "劳驾按材质把复合地板彻底清洁一遍，边角和表面残留都复查清楚。",
+      "expected_label": "object:original:laminate_floor",
+      "expected_decision": "success",
+      "coverage_key": "original:laminate_floor",
+      "object_name_zh": "复合地板",
+      "catalog_task": "cleaning",
+      "operation_evidence": [
+        "task_template:cleaning"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-004",
+      "category": "object",
+      "instruction": "请按材质把大理石地面彻底清洁一遍，边角和表面残留都复查清楚。",
+      "expected_label": "object:original:marble_floor",
+      "expected_decision": "success",
+      "coverage_key": "original:marble_floor",
+      "object_name_zh": "大理石地面",
+      "catalog_task": "cleaning",
+      "operation_evidence": [
+        "task_template:cleaning"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-005",
+      "category": "object",
+      "instruction": "麻烦你，按材质把扫地机器人彻底清洁一遍，边角和表面残留都复查清楚。",
+      "expected_label": "object:original:robot_vacuum",
+      "expected_decision": "success",
+      "coverage_key": "original:robot_vacuum",
+      "object_name_zh": "扫地机器人",
+      "catalog_task": "cleaning",
+      "operation_evidence": [
+        "task_template:cleaning"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-006",
+      "category": "object",
+      "instruction": "现在请按材质把瓷砖彻底清洁一遍，边角和表面残留都复查清楚。",
+      "expected_label": "object:original:tile_floor",
+      "expected_decision": "success",
+      "coverage_key": "original:tile_floor",
+      "object_name_zh": "瓷砖",
+      "catalog_task": "cleaning",
+      "operation_evidence": [
+        "task_template:cleaning"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-007",
+      "category": "object",
+      "instruction": "劳驾按材质把塑胶地板彻底清洁一遍，边角和表面残留都复查清楚。",
+      "expected_label": "object:original:vinyl_floor",
+      "expected_decision": "success",
+      "coverage_key": "original:vinyl_floor",
+      "object_name_zh": "塑胶地板",
+      "catalog_task": "cleaning",
+      "operation_evidence": [
+        "task_template:cleaning"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-008",
+      "category": "object",
+      "instruction": "请按材质把木地板彻底清洁一遍，边角和表面残留都复查清楚。",
+      "expected_label": "object:original:wood_floor",
+      "expected_decision": "success",
+      "coverage_key": "original:wood_floor",
+      "object_name_zh": "木地板",
+      "catalog_task": "cleaning",
+      "operation_evidence": [
+        "task_template:cleaning"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-009",
+      "category": "object",
+      "instruction": "麻烦你，请把卫浴搁板按个人护理用品的卫生分区稳妥归置，完成后检查干燥和取用位置。",
+      "expected_label": "object:vla:vla_076",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_076",
+      "object_name_zh": "卫浴搁板",
+      "catalog_task": "bathroom_personal_care",
+      "operation_evidence": [
+        "task_template:bathroom_personal_care"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-010",
+      "category": "object",
+      "instruction": "现在请请把卫生巾盒按个人护理用品的卫生分区稳妥归置，完成后检查干燥和取用位置。",
+      "expected_label": "object:vla:vla_077",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_077",
+      "object_name_zh": "卫生巾盒",
+      "catalog_task": "bathroom_personal_care",
+      "operation_evidence": [
+        "task_template:bathroom_personal_care"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-011",
+      "category": "object",
+      "instruction": "劳驾请把固体香皂按个人护理用品的卫生分区稳妥归置，完成后检查干燥和取用位置。",
+      "expected_label": "object:vla:vla_078",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_078",
+      "object_name_zh": "固体香皂",
+      "catalog_task": "bathroom_personal_care",
+      "operation_evidence": [
+        "task_template:bathroom_personal_care"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-012",
+      "category": "object",
+      "instruction": "请请把洗涤剂按个人护理用品的卫生分区稳妥归置，完成后检查干燥和取用位置。",
+      "expected_label": "object:vla:vla_079",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_079",
+      "object_name_zh": "洗涤剂",
+      "catalog_task": "bathroom_personal_care",
+      "operation_evidence": [
+        "task_template:bathroom_personal_care"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-013",
+      "category": "object",
+      "instruction": "麻烦你，请把牙刷按个人护理用品的卫生分区稳妥归置，完成后检查干燥和取用位置。",
+      "expected_label": "object:vla:vla_080",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_080",
+      "object_name_zh": "牙刷",
+      "catalog_task": "bathroom_personal_care",
+      "operation_evidence": [
+        "task_template:bathroom_personal_care"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-014",
+      "category": "object",
+      "instruction": "现在请请把牙膏按个人护理用品的卫生分区稳妥归置，完成后检查干燥和取用位置。",
+      "expected_label": "object:vla:vla_081",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_081",
+      "object_name_zh": "牙膏",
+      "catalog_task": "bathroom_personal_care",
+      "operation_evidence": [
+        "task_template:bathroom_personal_care"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-015",
+      "category": "object",
+      "instruction": "劳驾请把皂液器按个人护理用品的卫生分区稳妥归置，完成后检查干燥和取用位置。",
+      "expected_label": "object:vla:vla_082",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_082",
+      "object_name_zh": "皂液器",
+      "catalog_task": "bathroom_personal_care",
+      "operation_evidence": [
+        "task_template:bathroom_personal_care"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-016",
+      "category": "object",
+      "instruction": "请按材质把浴缸彻底清洁一遍，边角和表面残留都复查清楚。",
+      "expected_label": "object:original:bathtub",
+      "expected_decision": "success",
+      "coverage_key": "original:bathtub",
+      "object_name_zh": "浴缸",
+      "catalog_task": "cleaning",
+      "operation_evidence": [
+        "task_template:cleaning"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-017",
+      "category": "object",
+      "instruction": "麻烦你，按材质把水龙头彻底清洁一遍，边角和表面残留都复查清楚。",
+      "expected_label": "object:original:faucet",
+      "expected_decision": "success",
+      "coverage_key": "original:faucet",
+      "object_name_zh": "水龙头",
+      "catalog_task": "cleaning",
+      "operation_evidence": [
+        "task_template:cleaning"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-018",
+      "category": "object",
+      "instruction": "现在请按材质把镜子彻底清洁一遍，边角和表面残留都复查清楚。",
+      "expected_label": "object:original:mirror",
+      "expected_decision": "success",
+      "coverage_key": "original:mirror",
+      "object_name_zh": "镜子",
+      "catalog_task": "cleaning",
+      "operation_evidence": [
+        "task_template:cleaning"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-019",
+      "category": "object",
+      "instruction": "劳驾按材质把淋浴彻底清洁一遍，边角和表面残留都复查清楚。",
+      "expected_label": "object:original:shower",
+      "expected_decision": "success",
+      "coverage_key": "original:shower",
+      "object_name_zh": "淋浴",
+      "catalog_task": "cleaning",
+      "operation_evidence": [
+        "task_template:cleaning"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-020",
+      "category": "object",
+      "instruction": "请按材质把水槽彻底清洁一遍，边角和表面残留都复查清楚。",
+      "expected_label": "object:original:sink",
+      "expected_decision": "success",
+      "coverage_key": "original:sink",
+      "object_name_zh": "水槽",
+      "catalog_task": "cleaning",
+      "operation_evidence": [
+        "task_template:cleaning"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-021",
+      "category": "object",
+      "instruction": "麻烦你，按材质把肥皂彻底清洁一遍，边角和表面残留都复查清楚。",
+      "expected_label": "object:original:soap",
+      "expected_decision": "success",
+      "coverage_key": "original:soap",
+      "object_name_zh": "肥皂",
+      "catalog_task": "cleaning",
+      "operation_evidence": [
+        "task_template:cleaning"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-022",
+      "category": "object",
+      "instruction": "现在请按材质把马桶彻底清洁一遍，边角和表面残留都复查清楚。",
+      "expected_label": "object:original:toilet",
+      "expected_decision": "success",
+      "coverage_key": "original:toilet",
+      "object_name_zh": "马桶",
+      "catalog_task": "cleaning",
+      "operation_evidence": [
+        "task_template:cleaning"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-023",
+      "category": "object",
+      "instruction": "把吃完饭的碗按材质洗净，内外壁和碗沿都清洁后再检查残留。",
+      "expected_label": "object:original:bowl",
+      "expected_decision": "success",
+      "coverage_key": "original:bowl",
+      "object_name_zh": "碗",
+      "catalog_task": "cleaning",
+      "operation_evidence": [
+        "manual:object:original:bowl"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-024",
+      "category": "object",
+      "instruction": "请按材质把杯子彻底清洁一遍，边角和表面残留都复查清楚。",
+      "expected_label": "object:original:cup",
+      "expected_decision": "success",
+      "coverage_key": "original:cup",
+      "object_name_zh": "杯子",
+      "catalog_task": "cleaning",
+      "operation_evidence": [
+        "task_template:cleaning"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-025",
+      "category": "object",
+      "instruction": "麻烦你，按材质把叉子彻底清洁一遍，边角和表面残留都复查清楚。",
+      "expected_label": "object:original:fork",
+      "expected_decision": "success",
+      "coverage_key": "original:fork",
+      "object_name_zh": "叉子",
+      "catalog_task": "cleaning",
+      "operation_evidence": [
+        "task_template:cleaning"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-026",
+      "category": "object",
+      "instruction": "现在请按材质把刀彻底清洁一遍，边角和表面残留都复查清楚。",
+      "expected_label": "object:original:knife",
+      "expected_decision": "success",
+      "coverage_key": "original:knife",
+      "object_name_zh": "刀",
+      "catalog_task": "cleaning",
+      "operation_evidence": [
+        "task_template:cleaning"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-027",
+      "category": "object",
+      "instruction": "这只马克杯有咖啡渍，请按杯体材质清洗内壁、杯沿和把手。",
+      "expected_label": "object:original:mug",
+      "expected_decision": "success",
+      "coverage_key": "original:mug",
+      "object_name_zh": "马克杯",
+      "catalog_task": "cleaning",
+      "operation_evidence": [
+        "manual:object:original:mug"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-028",
+      "category": "object",
+      "instruction": "把用过的盘子按材质彻底洗净，盘沿和盘底也复查一遍。",
+      "expected_label": "object:original:plate",
+      "expected_decision": "success",
+      "coverage_key": "original:plate",
+      "object_name_zh": "盘子",
+      "catalog_task": "cleaning",
+      "operation_evidence": [
+        "manual:object:original:plate"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-029",
+      "category": "object",
+      "instruction": "锅里有油污，请等它冷却后按材质清洗，锅底和锅柄都复查干净。",
+      "expected_label": "object:original:pot",
+      "expected_decision": "success",
+      "coverage_key": "original:pot",
+      "object_name_zh": "锅",
+      "catalog_task": "cleaning",
+      "operation_evidence": [
+        "manual:object:original:pot"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-030",
+      "category": "object",
+      "instruction": "现在请按材质把勺子彻底清洁一遍，边角和表面残留都复查清楚。",
+      "expected_label": "object:original:spoon",
+      "expected_decision": "success",
+      "coverage_key": "original:spoon",
+      "object_name_zh": "勺子",
+      "catalog_task": "cleaning",
+      "operation_evidence": [
+        "task_template:cleaning"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-031",
+      "category": "object",
+      "instruction": "劳驾拿海绵按适合材质的方法完成清洁，控制用量和力度，收尾后清洗归位。",
+      "expected_label": "object:vla:vla_002",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_002",
+      "object_name_zh": "海绵",
+      "catalog_task": "indoor_cleaning",
+      "operation_evidence": [
+        "task_template:indoor_cleaning"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-032",
+      "category": "object",
+      "instruction": "请拿清洁刷按适合材质的方法完成清洁，控制用量和力度，收尾后清洗归位。",
+      "expected_label": "object:vla:vla_003",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_003",
+      "object_name_zh": "清洁刷",
+      "catalog_task": "indoor_cleaning",
+      "operation_evidence": [
+        "task_template:indoor_cleaning"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-033",
+      "category": "object",
+      "instruction": "麻烦你，拿清洁喷雾瓶按适合材质的方法完成清洁，控制用量和力度，收尾后清洗归位。",
+      "expected_label": "object:vla:vla_004",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_004",
+      "object_name_zh": "清洁喷雾瓶",
+      "catalog_task": "indoor_cleaning",
+      "operation_evidence": [
+        "task_template:indoor_cleaning"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-034",
+      "category": "object",
+      "instruction": "把客厅的饮料罐逐个放进厨房垃圾桶，检查桶袋容量并清理洒漏。",
+      "expected_label": "object:vla:vla_001",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_001",
+      "object_name_zh": "垃圾桶",
+      "catalog_task": "indoor_cleaning",
+      "operation_evidence": [
+        "manual:object:vla:vla_001"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-035",
+      "category": "object",
+      "instruction": "劳驾拿饮料罐按适合材质的方法完成清洁，控制用量和力度，收尾后清洗归位。",
+      "expected_label": "object:vla:vla_005",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_005",
+      "object_name_zh": "饮料罐",
+      "catalog_task": "indoor_cleaning",
+      "operation_evidence": [
+        "task_template:indoor_cleaning"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-036",
+      "category": "object",
+      "instruction": "请识别易拉罐的垃圾类别后分类投放，确认收集位置和周边洁净。",
+      "expected_label": "object:original:aluminum_can",
+      "expected_decision": "success",
+      "coverage_key": "original:aluminum_can",
+      "object_name_zh": "易拉罐",
+      "catalog_task": "waste_disposal",
+      "operation_evidence": [
+        "task_template:waste_disposal"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-037",
+      "category": "object",
+      "instruction": "麻烦你，识别电池的垃圾类别后分类投放，确认收集位置和周边洁净。",
+      "expected_label": "object:original:battery",
+      "expected_decision": "success",
+      "coverage_key": "original:battery",
+      "object_name_zh": "电池",
+      "catalog_task": "waste_disposal",
+      "operation_evidence": [
+        "task_template:waste_disposal"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-038",
+      "category": "object",
+      "instruction": "把废旧纸箱压平并按可回收垃圾分类投放，搬运时保持干燥整洁。",
+      "expected_label": "object:original:cardboard_box",
+      "expected_decision": "success",
+      "coverage_key": "original:cardboard_box",
+      "object_name_zh": "纸箱",
+      "catalog_task": "waste_disposal",
+      "operation_evidence": [
+        "manual:object:original:cardboard_box"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-039",
+      "category": "object",
+      "instruction": "劳驾识别食物的垃圾类别后分类投放，确认收集位置和周边洁净。",
+      "expected_label": "object:original:food",
+      "expected_decision": "success",
+      "coverage_key": "original:food",
+      "object_name_zh": "食物",
+      "catalog_task": "waste_disposal",
+      "operation_evidence": [
+        "task_template:waste_disposal"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-040",
+      "category": "object",
+      "instruction": "请识别玻璃瓶的垃圾类别后分类投放，确认收集位置和周边洁净。",
+      "expected_label": "object:original:glass_bottle",
+      "expected_decision": "success",
+      "coverage_key": "original:glass_bottle",
+      "object_name_zh": "玻璃瓶",
+      "catalog_task": "waste_disposal",
+      "operation_evidence": [
+        "task_template:waste_disposal"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-041",
+      "category": "object",
+      "instruction": "麻烦你，识别塑料袋的垃圾类别后分类投放，确认收集位置和周边洁净。",
+      "expected_label": "object:original:plastic_bag",
+      "expected_decision": "success",
+      "coverage_key": "original:plastic_bag",
+      "object_name_zh": "塑料袋",
+      "catalog_task": "waste_disposal",
+      "operation_evidence": [
+        "task_template:waste_disposal"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-042",
+      "category": "object",
+      "instruction": "现在请识别可回收瓶的垃圾类别后分类投放，确认收集位置和周边洁净。",
+      "expected_label": "object:original:recyclable_bottle",
+      "expected_decision": "success",
+      "coverage_key": "original:recyclable_bottle",
+      "object_name_zh": "可回收瓶",
+      "catalog_task": "waste_disposal",
+      "operation_evidence": [
+        "task_template:waste_disposal"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-043",
+      "category": "object",
+      "instruction": "检查垃圾桶里的废物类别，完成分类投放后清洁接触区域。",
+      "expected_label": "object:original:trash_bin",
+      "expected_decision": "success",
+      "coverage_key": "original:trash_bin",
+      "object_name_zh": "垃圾桶",
+      "catalog_task": "waste_disposal",
+      "operation_evidence": [
+        "manual:object:original:trash_bin"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-044",
+      "category": "object",
+      "instruction": "请做饭时请把削皮刀按烹饪用途准备好，检查状态后稳妥操作并复核位置。",
+      "expected_label": "object:vla:vla_006",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_006",
+      "object_name_zh": "削皮刀",
+      "catalog_task": "cooking_heating",
+      "operation_evidence": [
+        "task_template:cooking_heating"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-045",
+      "category": "object",
+      "instruction": "用平底锅把卷心菜和辣椒依次翻炒，控制中火，断生后关火装盘。",
+      "expected_label": "object:vla:vla_007",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_007",
+      "object_name_zh": "平底锅",
+      "catalog_task": "cooking_heating",
+      "operation_evidence": [
+        "manual:object:vla:vla_007"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-046",
+      "category": "object",
+      "instruction": "现在请做饭时请把打蛋器按烹饪用途准备好，检查状态后稳妥操作并复核位置。",
+      "expected_label": "object:vla:vla_008",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_008",
+      "object_name_zh": "打蛋器",
+      "catalog_task": "cooking_heating",
+      "operation_evidence": [
+        "task_template:cooking_heating"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-047",
+      "category": "object",
+      "instruction": "劳驾做饭时请把擀面杖按烹饪用途准备好，检查状态后稳妥操作并复核位置。",
+      "expected_label": "object:vla:vla_009",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_009",
+      "object_name_zh": "擀面杖",
+      "catalog_task": "cooking_heating",
+      "operation_evidence": [
+        "task_template:cooking_heating"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-048",
+      "category": "object",
+      "instruction": "请做饭时请把混合碗按烹饪用途准备好，检查状态后稳妥操作并复核位置。",
+      "expected_label": "object:vla:vla_010",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_010",
+      "object_name_zh": "混合碗",
+      "catalog_task": "cooking_heating",
+      "operation_evidence": [
+        "task_template:cooking_heating"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-049",
+      "category": "object",
+      "instruction": "麻烦你，做饭时请把炉灶按烹饪用途准备好，检查状态后稳妥操作并复核位置。",
+      "expected_label": "object:vla:vla_011",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_011",
+      "object_name_zh": "炉灶",
+      "catalog_task": "cooking_heating",
+      "operation_evidence": [
+        "task_template:cooking_heating"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-050",
+      "category": "object",
+      "instruction": "隔热防护就绪后缓慢关好高温烤箱门，确认锁扣到位和门缝均匀。",
+      "expected_label": "object:vla:vla_012",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_012",
+      "object_name_zh": "烤箱",
+      "catalog_task": "cooking_heating",
+      "operation_evidence": [
+        "manual:object:vla:vla_012"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-051",
+      "category": "object",
+      "instruction": "劳驾做饭时请把烤面包机下层烤盘按烹饪用途准备好，检查状态后稳妥操作并复核位置。",
+      "expected_label": "object:vla:vla_013",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_013",
+      "object_name_zh": "烤面包机下层烤盘",
+      "catalog_task": "cooking_heating",
+      "operation_evidence": [
+        "task_template:cooking_heating"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-052",
+      "category": "object",
+      "instruction": "请做饭时请把烹饪托盘按烹饪用途准备好，检查状态后稳妥操作并复核位置。",
+      "expected_label": "object:vla:vla_014",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_014",
+      "object_name_zh": "烹饪托盘",
+      "catalog_task": "cooking_heating",
+      "operation_evidence": [
+        "task_template:cooking_heating"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-053",
+      "category": "object",
+      "instruction": "麻烦你，做饭时请把玻璃罐按烹饪用途准备好，检查状态后稳妥操作并复核位置。",
+      "expected_label": "object:vla:vla_015",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_015",
+      "object_name_zh": "玻璃罐",
+      "catalog_task": "cooking_heating",
+      "operation_evidence": [
+        "task_template:cooking_heating"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-054",
+      "category": "object",
+      "instruction": "现在请做饭时请把砧板按烹饪用途准备好，检查状态后稳妥操作并复核位置。",
+      "expected_label": "object:vla:vla_016",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_016",
+      "object_name_zh": "砧板",
+      "catalog_task": "cooking_heating",
+      "operation_evidence": [
+        "task_template:cooking_heating"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-055",
+      "category": "object",
+      "instruction": "把锅里煮好的苹果分批盛进耐热碗，装到约三分之二并把碗放稳。",
+      "expected_label": "object:vla:vla_017",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_017",
+      "object_name_zh": "碗",
+      "catalog_task": "cooking_heating",
+      "operation_evidence": [
+        "manual:object:vla:vla_017"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-056",
+      "category": "object",
+      "instruction": "请做饭时请把茶壶按烹饪用途准备好，检查状态后稳妥操作并复核位置。",
+      "expected_label": "object:vla:vla_018",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_018",
+      "object_name_zh": "茶壶",
+      "catalog_task": "cooking_heating",
+      "operation_evidence": [
+        "task_template:cooking_heating"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-057",
+      "category": "object",
+      "instruction": "麻烦你，做饭时请把调味罐按烹饪用途准备好，检查状态后稳妥操作并复核位置。",
+      "expected_label": "object:vla:vla_019",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_019",
+      "object_name_zh": "调味罐",
+      "catalog_task": "cooking_heating",
+      "operation_evidence": [
+        "task_template:cooking_heating"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-058",
+      "category": "object",
+      "instruction": "现在请做饭时请把量杯按烹饪用途准备好，检查状态后稳妥操作并复核位置。",
+      "expected_label": "object:vla:vla_020",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_020",
+      "object_name_zh": "量杯",
+      "catalog_task": "cooking_heating",
+      "operation_evidence": [
+        "task_template:cooking_heating"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-059",
+      "category": "object",
+      "instruction": "把已经离火冷却的锅洗净擦干，再水平搬进橱柜指定层收好。",
+      "expected_label": "object:vla:vla_021",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_021",
+      "object_name_zh": "锅",
+      "catalog_task": "cooking_heating",
+      "operation_evidence": [
+        "manual:object:vla:vla_021"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-060",
+      "category": "object",
+      "instruction": "请做饭时请把餐刀按烹饪用途准备好，检查状态后稳妥操作并复核位置。",
+      "expected_label": "object:vla:vla_022",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_022",
+      "object_name_zh": "餐刀",
+      "catalog_task": "cooking_heating",
+      "operation_evidence": [
+        "task_template:cooking_heating"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-061",
+      "category": "object",
+      "instruction": "麻烦你，请检查搅拌机的供电和当前状态，设好烹饪参数后监测到目标状态。",
+      "expected_label": "object:original:blender",
+      "expected_decision": "success",
+      "coverage_key": "original:blender",
+      "object_name_zh": "搅拌机",
+      "catalog_task": "smart_cooking",
+      "operation_evidence": [
+        "task_template:smart_cooking"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-062",
+      "category": "object",
+      "instruction": "现在请请检查电热水壶的供电和当前状态，设好烹饪参数后监测到目标状态。",
+      "expected_label": "object:original:electric_kettle",
+      "expected_decision": "success",
+      "coverage_key": "original:electric_kettle",
+      "object_name_zh": "电热水壶",
+      "catalog_task": "smart_cooking",
+      "operation_evidence": [
+        "task_template:smart_cooking"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-063",
+      "category": "object",
+      "instruction": "检查平底锅状态并按菜谱设置温度和时间，完成加热后确认断电防烫。",
+      "expected_label": "object:original:frying_pan",
+      "expected_decision": "success",
+      "coverage_key": "original:frying_pan",
+      "object_name_zh": "平底锅",
+      "catalog_task": "smart_cooking",
+      "operation_evidence": [
+        "manual:object:original:frying_pan"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-064",
+      "category": "object",
+      "instruction": "请请检查电磁炉的供电和当前状态，设好烹饪参数后监测到目标状态。",
+      "expected_label": "object:original:induction_cooker",
+      "expected_decision": "success",
+      "coverage_key": "original:induction_cooker",
+      "object_name_zh": "电磁炉",
+      "catalog_task": "smart_cooking",
+      "operation_evidence": [
+        "task_template:smart_cooking"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-065",
+      "category": "object",
+      "instruction": "麻烦你，请检查微波炉的供电和当前状态，设好烹饪参数后监测到目标状态。",
+      "expected_label": "object:original:microwave",
+      "expected_decision": "success",
+      "coverage_key": "original:microwave",
+      "object_name_zh": "微波炉",
+      "catalog_task": "smart_cooking",
+      "operation_evidence": [
+        "task_template:smart_cooking"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-066",
+      "category": "object",
+      "instruction": "检查烤箱容量和当前状态，设定烹饪温度与时间并监测到完成。",
+      "expected_label": "object:original:oven",
+      "expected_decision": "success",
+      "coverage_key": "original:oven",
+      "object_name_zh": "烤箱",
+      "catalog_task": "smart_cooking",
+      "operation_evidence": [
+        "manual:object:original:oven"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-067",
+      "category": "object",
+      "instruction": "劳驾请检查压力锅的供电和当前状态，设好烹饪参数后监测到目标状态。",
+      "expected_label": "object:original:pressure_cooker",
+      "expected_decision": "success",
+      "coverage_key": "original:pressure_cooker",
+      "object_name_zh": "压力锅",
+      "catalog_task": "smart_cooking",
+      "operation_evidence": [
+        "task_template:smart_cooking"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-068",
+      "category": "object",
+      "instruction": "请请检查电饭煲的供电和当前状态，设好烹饪参数后监测到目标状态。",
+      "expected_label": "object:original:rice_cooker",
+      "expected_decision": "success",
+      "coverage_key": "original:rice_cooker",
+      "object_name_zh": "电饭煲",
+      "catalog_task": "smart_cooking",
+      "operation_evidence": [
+        "task_template:smart_cooking"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-069",
+      "category": "object",
+      "instruction": "麻烦你，开饭前把瓶子摆到餐桌合适位置，保持朝向和间距方便取用。",
+      "expected_label": "object:original:bottle",
+      "expected_decision": "success",
+      "coverage_key": "original:bottle",
+      "object_name_zh": "瓶子",
+      "catalog_task": "food_serving",
+      "operation_evidence": [
+        "task_template:food_serving"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-070",
+      "category": "object",
+      "instruction": "现在请开饭前把筷子摆到餐桌合适位置，保持朝向和间距方便取用。",
+      "expected_label": "object:original:chopsticks",
+      "expected_decision": "success",
+      "coverage_key": "original:chopsticks",
+      "object_name_zh": "筷子",
+      "catalog_task": "food_serving",
+      "operation_evidence": [
+        "task_template:food_serving"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-071",
+      "category": "object",
+      "instruction": "劳驾开饭前把餐碟摆到餐桌合适位置，保持朝向和间距方便取用。",
+      "expected_label": "object:original:dinner_plate",
+      "expected_decision": "success",
+      "coverage_key": "original:dinner_plate",
+      "object_name_zh": "餐碟",
+      "catalog_task": "food_serving",
+      "operation_evidence": [
+        "task_template:food_serving"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-072",
+      "category": "object",
+      "instruction": "请开饭前把餐盘摆到餐桌合适位置，保持朝向和间距方便取用。",
+      "expected_label": "object:original:food_tray",
+      "expected_decision": "success",
+      "coverage_key": "original:food_tray",
+      "object_name_zh": "餐盘",
+      "catalog_task": "food_serving",
+      "operation_evidence": [
+        "task_template:food_serving"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-073",
+      "category": "object",
+      "instruction": "麻烦你，开饭前把汤碗摆到餐桌合适位置，保持朝向和间距方便取用。",
+      "expected_label": "object:original:serving_bowl",
+      "expected_decision": "success",
+      "coverage_key": "original:serving_bowl",
+      "object_name_zh": "汤碗",
+      "catalog_task": "food_serving",
+      "operation_evidence": [
+        "task_template:food_serving"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-074",
+      "category": "object",
+      "instruction": "现在请开饭前把保温杯摆到餐桌合适位置，保持朝向和间距方便取用。",
+      "expected_label": "object:original:thermos",
+      "expected_decision": "success",
+      "coverage_key": "original:thermos",
+      "object_name_zh": "保温杯",
+      "catalog_task": "food_serving",
+      "operation_evidence": [
+        "task_template:food_serving"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-075",
+      "category": "object",
+      "instruction": "劳驾开饭前把饮水杯摆到餐桌合适位置，保持朝向和间距方便取用。",
+      "expected_label": "object:original:water_cup",
+      "expected_decision": "success",
+      "coverage_key": "original:water_cup",
+      "object_name_zh": "饮水杯",
+      "catalog_task": "food_serving",
+      "operation_evidence": [
+        "task_template:food_serving"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-076",
+      "category": "object",
+      "instruction": "请开饭前把酒杯摆到餐桌合适位置，保持朝向和间距方便取用。",
+      "expected_label": "object:original:wine_glass",
+      "expected_decision": "success",
+      "coverage_key": "original:wine_glass",
+      "object_name_zh": "酒杯",
+      "catalog_task": "food_serving",
+      "operation_evidence": [
+        "task_template:food_serving"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-077",
+      "category": "object",
+      "instruction": "麻烦你，请把咖啡杯按餐具用途摆放到指定位置，调整朝向并确认稳定。",
+      "expected_label": "object:vla:vla_050",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_050",
+      "object_name_zh": "咖啡杯",
+      "catalog_task": "tableware_placement",
+      "operation_evidence": [
+        "task_template:tableware_placement"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-078",
+      "category": "object",
+      "instruction": "现在请请把水罐按餐具用途摆放到指定位置，调整朝向并确认稳定。",
+      "expected_label": "object:vla:vla_054",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_054",
+      "object_name_zh": "水罐",
+      "catalog_task": "tableware_placement",
+      "operation_evidence": [
+        "task_template:tableware_placement"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-079",
+      "category": "object",
+      "instruction": "把平底锅里做好的苹果分批装到耐热盘子上，摆匀后擦净盘沿。",
+      "expected_label": "object:vla:vla_058",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_058",
+      "object_name_zh": "盘子",
+      "catalog_task": "tableware_placement",
+      "operation_evidence": [
+        "manual:object:vla:vla_058"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-080",
+      "category": "object",
+      "instruction": "请请把夹子按餐具用途摆放到指定位置，调整朝向并确认稳定。",
+      "expected_label": "object:vla:vla_051",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_051",
+      "object_name_zh": "夹子",
+      "catalog_task": "tableware_placement",
+      "operation_evidence": [
+        "task_template:tableware_placement"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-081",
+      "category": "object",
+      "instruction": "麻烦你，请把披萨刀按餐具用途摆放到指定位置，调整朝向并确认稳定。",
+      "expected_label": "object:vla:vla_052",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_052",
+      "object_name_zh": "披萨刀",
+      "catalog_task": "tableware_placement",
+      "operation_evidence": [
+        "task_template:tableware_placement"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-082",
+      "category": "object",
+      "instruction": "现在请请把木勺按餐具用途摆放到指定位置，调整朝向并确认稳定。",
+      "expected_label": "object:vla:vla_053",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_053",
+      "object_name_zh": "木勺",
+      "catalog_task": "tableware_placement",
+      "operation_evidence": [
+        "task_template:tableware_placement"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-083",
+      "category": "object",
+      "instruction": "劳驾请把汤勺按餐具用途摆放到指定位置，调整朝向并确认稳定。",
+      "expected_label": "object:vla:vla_055",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_055",
+      "object_name_zh": "汤勺",
+      "catalog_task": "tableware_placement",
+      "operation_evidence": [
+        "task_template:tableware_placement"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-084",
+      "category": "object",
+      "instruction": "请请把洗碗刷按餐具用途摆放到指定位置，调整朝向并确认稳定。",
+      "expected_label": "object:vla:vla_056",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_056",
+      "object_name_zh": "洗碗刷",
+      "catalog_task": "tableware_placement",
+      "operation_evidence": [
+        "task_template:tableware_placement"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-085",
+      "category": "object",
+      "instruction": "麻烦你，请把滤盆按餐具用途摆放到指定位置，调整朝向并确认稳定。",
+      "expected_label": "object:vla:vla_057",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_057",
+      "object_name_zh": "滤盆",
+      "catalog_task": "tableware_placement",
+      "operation_evidence": [
+        "task_template:tableware_placement"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-086",
+      "category": "object",
+      "instruction": "现在请请把铝箔纸按餐具用途摆放到指定位置，调整朝向并确认稳定。",
+      "expected_label": "object:vla:vla_059",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_059",
+      "object_name_zh": "铝箔纸",
+      "catalog_task": "tableware_placement",
+      "operation_evidence": [
+        "task_template:tableware_placement"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-087",
+      "category": "object",
+      "instruction": "劳驾看一下冰箱当前的开合或运行状态，按使用需求调到目标状态并确认安全。",
+      "expected_label": "object:original:refrigerator",
+      "expected_decision": "success",
+      "coverage_key": "original:refrigerator",
+      "object_name_zh": "冰箱",
+      "catalog_task": "appliance_management",
+      "operation_evidence": [
+        "task_template:appliance_management"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-088",
+      "category": "object",
+      "instruction": "请请操作冰箱层架完成需要的开合或抽拉，先检查周围空间，结束时确认位置到位。",
+      "expected_label": "object:vla:vla_035",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_035",
+      "object_name_zh": "冰箱层架",
+      "catalog_task": "storage_open_close",
+      "operation_evidence": [
+        "task_template:storage_open_close"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-089",
+      "category": "object",
+      "instruction": "麻烦你，请操作冰箱抽屉完成需要的开合或抽拉，先检查周围空间，结束时确认位置到位。",
+      "expected_label": "object:vla:vla_036",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_036",
+      "object_name_zh": "冰箱抽屉",
+      "catalog_task": "storage_open_close",
+      "operation_evidence": [
+        "task_template:storage_open_close"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-090",
+      "category": "object",
+      "instruction": "现在请请操作冰箱门完成需要的开合或抽拉，先检查周围空间，结束时确认位置到位。",
+      "expected_label": "object:vla:vla_037",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_037",
+      "object_name_zh": "冰箱门",
+      "catalog_task": "storage_open_close",
+      "operation_evidence": [
+        "task_template:storage_open_close"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-091",
+      "category": "object",
+      "instruction": "劳驾请操作微波炉门完成需要的开合或抽拉，先检查周围空间，结束时确认位置到位。",
+      "expected_label": "object:vla:vla_038",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_038",
+      "object_name_zh": "微波炉门",
+      "catalog_task": "storage_open_close",
+      "operation_evidence": [
+        "task_template:storage_open_close"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-092",
+      "category": "object",
+      "instruction": "请请操作洗碗机上层架完成需要的开合或抽拉，先检查周围空间，结束时确认位置到位。",
+      "expected_label": "object:vla:vla_041",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_041",
+      "object_name_zh": "洗碗机上层架",
+      "catalog_task": "storage_open_close",
+      "operation_evidence": [
+        "task_template:storage_open_close"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-093",
+      "category": "object",
+      "instruction": "麻烦你，请操作洗碗机门完成需要的开合或抽拉，先检查周围空间，结束时确认位置到位。",
+      "expected_label": "object:vla:vla_042",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_042",
+      "object_name_zh": "洗碗机门",
+      "catalog_task": "storage_open_close",
+      "operation_evidence": [
+        "task_template:storage_open_close"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-094",
+      "category": "object",
+      "instruction": "现在请请操作烤箱门完成需要的开合或抽拉，先检查周围空间，结束时确认位置到位。",
+      "expected_label": "object:vla:vla_043",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_043",
+      "object_name_zh": "烤箱门",
+      "catalog_task": "storage_open_close",
+      "operation_evidence": [
+        "task_template:storage_open_close"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-095",
+      "category": "object",
+      "instruction": "劳驾请操作烤面包机烤箱门完成需要的开合或抽拉，先检查周围空间，结束时确认位置到位。",
+      "expected_label": "object:vla:vla_044",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_044",
+      "object_name_zh": "烤面包机烤箱门",
+      "catalog_task": "storage_open_close",
+      "operation_evidence": [
+        "task_template:storage_open_close"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-096",
+      "category": "object",
+      "instruction": "把左侧抽屉沿导轨平稳推回，最后几厘米减速并让面板与柜体齐平。",
+      "expected_label": "object:vla:vla_039",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_039",
+      "object_name_zh": "抽屉",
+      "catalog_task": "storage_open_close",
+      "operation_evidence": [
+        "manual:object:vla:vla_039"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-097",
+      "category": "object",
+      "instruction": "麻烦你，请操作橱柜门完成需要的开合或抽拉，先检查周围空间，结束时确认位置到位。",
+      "expected_label": "object:vla:vla_040",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_040",
+      "object_name_zh": "橱柜门",
+      "catalog_task": "storage_open_close",
+      "operation_evidence": [
+        "task_template:storage_open_close"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-098",
+      "category": "object",
+      "instruction": "现在请请找到水瓶并沿安全路径送到任务指定位置，放稳后核对朝向。",
+      "expected_label": "object:vla:vla_024",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_024",
+      "object_name_zh": "水瓶",
+      "catalog_task": "item_delivery",
+      "operation_evidence": [
+        "task_template:item_delivery"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-099",
+      "category": "object",
+      "instruction": "劳驾请找到盒装饮料并沿安全路径送到任务指定位置，放稳后核对朝向。",
+      "expected_label": "object:vla:vla_025",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_025",
+      "object_name_zh": "盒装饮料",
+      "catalog_task": "item_delivery",
+      "operation_evidence": [
+        "task_template:item_delivery"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-100",
+      "category": "object",
+      "instruction": "请请找到罐装物并沿安全路径送到任务指定位置，放稳后核对朝向。",
+      "expected_label": "object:vla:vla_026",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_026",
+      "object_name_zh": "罐装物",
+      "catalog_task": "item_delivery",
+      "operation_evidence": [
+        "task_template:item_delivery"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-101",
+      "category": "object",
+      "instruction": "麻烦你，请找到饮料瓶并沿安全路径送到任务指定位置，放稳后核对朝向。",
+      "expected_label": "object:vla:vla_027",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_027",
+      "object_name_zh": "饮料瓶",
+      "catalog_task": "item_delivery",
+      "operation_evidence": [
+        "task_template:item_delivery"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-102",
+      "category": "object",
+      "instruction": "把橱柜里的马克杯托稳送到台面，杯口朝上并让把手朝向使用者。",
+      "expected_label": "object:vla:vla_028",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_028",
+      "object_name_zh": "马克杯",
+      "catalog_task": "item_delivery",
+      "operation_evidence": [
+        "manual:object:vla:vla_028"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-103",
+      "category": "object",
+      "instruction": "劳驾把书架按类别、尺寸和使用频率整理归位，保持取用方便和重心稳定。",
+      "expected_label": "object:original:bookshelf",
+      "expected_decision": "success",
+      "coverage_key": "original:bookshelf",
+      "object_name_zh": "书架",
+      "catalog_task": "organizing",
+      "operation_evidence": [
+        "task_template:organizing"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-104",
+      "category": "object",
+      "instruction": "请把柜子按类别、尺寸和使用频率整理归位，保持取用方便和重心稳定。",
+      "expected_label": "object:original:cabinet",
+      "expected_decision": "success",
+      "coverage_key": "original:cabinet",
+      "object_name_zh": "柜子",
+      "catalog_task": "organizing",
+      "operation_evidence": [
+        "task_template:organizing"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-105",
+      "category": "object",
+      "instruction": "麻烦你，把茶几按类别、尺寸和使用频率整理归位，保持取用方便和重心稳定。",
+      "expected_label": "object:original:coffee_table",
+      "expected_decision": "success",
+      "coverage_key": "original:coffee_table",
+      "object_name_zh": "茶几",
+      "catalog_task": "organizing",
+      "operation_evidence": [
+        "task_template:organizing"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-106",
+      "category": "object",
+      "instruction": "现在请把书桌按类别、尺寸和使用频率整理归位，保持取用方便和重心稳定。",
+      "expected_label": "object:original:desk",
+      "expected_decision": "success",
+      "coverage_key": "original:desk",
+      "object_name_zh": "书桌",
+      "catalog_task": "organizing",
+      "operation_evidence": [
+        "task_template:organizing"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-107",
+      "category": "object",
+      "instruction": "把抽屉里的物品按类别和使用频率整理归位，保持取用顺手。",
+      "expected_label": "object:original:drawer",
+      "expected_decision": "success",
+      "coverage_key": "original:drawer",
+      "object_name_zh": "抽屉",
+      "catalog_task": "organizing",
+      "operation_evidence": [
+        "manual:object:original:drawer"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-108",
+      "category": "object",
+      "instruction": "把收纳箱按类别和尺寸整理到目标区域，保持重心稳定方便再取。",
+      "expected_label": "object:original:storage_box",
+      "expected_decision": "success",
+      "coverage_key": "original:storage_box",
+      "object_name_zh": "收纳箱",
+      "catalog_task": "organizing",
+      "operation_evidence": [
+        "manual:object:original:storage_box"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-109",
+      "category": "object",
+      "instruction": "麻烦你，把玩具按类别、尺寸和使用频率整理归位，保持取用方便和重心稳定。",
+      "expected_label": "object:original:toy",
+      "expected_decision": "success",
+      "coverage_key": "original:toy",
+      "object_name_zh": "玩具",
+      "catalog_task": "organizing",
+      "operation_evidence": [
+        "task_template:organizing"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-110",
+      "category": "object",
+      "instruction": "现在请把衣柜按类别、尺寸和使用频率整理归位，保持取用方便和重心稳定。",
+      "expected_label": "object:original:wardrobe",
+      "expected_decision": "success",
+      "coverage_key": "original:wardrobe",
+      "object_name_zh": "衣柜",
+      "catalog_task": "organizing",
+      "operation_evidence": [
+        "task_template:organizing"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-111",
+      "category": "object",
+      "instruction": "劳驾请把密封保鲜盒用于收纳整理，按类别放到指定区域并确认摆放稳妥。",
+      "expected_label": "object:vla:vla_029",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_029",
+      "object_name_zh": "密封保鲜盒",
+      "catalog_task": "organizing_storage",
+      "operation_evidence": [
+        "task_template:organizing_storage"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-112",
+      "category": "object",
+      "instruction": "清出床头柜台面，把床上的书托稳放到远离边缘的位置。",
+      "expected_label": "object:vla:vla_030",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_030",
+      "object_name_zh": "床头柜",
+      "catalog_task": "organizing_storage",
+      "operation_evidence": [
+        "manual:object:vla:vla_030"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-113",
+      "category": "object",
+      "instruction": "麻烦你，请把收纳盒用于收纳整理，按类别放到指定区域并确认摆放稳妥。",
+      "expected_label": "object:vla:vla_031",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_031",
+      "object_name_zh": "收纳盒",
+      "catalog_task": "organizing_storage",
+      "operation_evidence": [
+        "task_template:organizing_storage"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-114",
+      "category": "object",
+      "instruction": "把六本书按重量装入收纳箱，重书在下并让箱内重量左右均衡。",
+      "expected_label": "object:vla:vla_032",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_032",
+      "object_name_zh": "收纳箱",
+      "catalog_task": "organizing_storage",
+      "operation_evidence": [
+        "manual:object:vla:vla_032"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-115",
+      "category": "object",
+      "instruction": "劳驾请把收纳篮用于收纳整理，按类别放到指定区域并确认摆放稳妥。",
+      "expected_label": "object:vla:vla_033",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_033",
+      "object_name_zh": "收纳篮",
+      "catalog_task": "organizing_storage",
+      "operation_evidence": [
+        "task_template:organizing_storage"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-116",
+      "category": "object",
+      "instruction": "把六本书按大小重量装进纸箱，重书在下并给箱体贴好书籍标识。",
+      "expected_label": "object:vla:vla_034",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_034",
+      "object_name_zh": "纸箱",
+      "catalog_task": "organizing_storage",
+      "operation_evidence": [
+        "manual:object:vla:vla_034"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-117",
+      "category": "object",
+      "instruction": "查看洗衣机当前电源和运行状态，选择目标程序并监测安全联锁。",
+      "expected_label": "object:original:washing_machine",
+      "expected_decision": "success",
+      "coverage_key": "original:washing_machine",
+      "object_name_zh": "洗衣机",
+      "catalog_task": "appliance_management",
+      "operation_evidence": [
+        "manual:object:original:washing_machine"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-118",
+      "category": "object",
+      "instruction": "现在请先看床单的材质和洗护标签，再选择合适方式护理，完成后平整收好。",
+      "expected_label": "object:original:bed_sheet",
+      "expected_decision": "success",
+      "coverage_key": "original:bed_sheet",
+      "object_name_zh": "床单",
+      "catalog_task": "clothing_care",
+      "operation_evidence": [
+        "task_template:clothing_care"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-119",
+      "category": "object",
+      "instruction": "劳驾先看连衣裙的材质和洗护标签，再选择合适方式护理，完成后平整收好。",
+      "expected_label": "object:original:dress",
+      "expected_decision": "success",
+      "coverage_key": "original:dress",
+      "object_name_zh": "连衣裙",
+      "catalog_task": "clothing_care",
+      "operation_evidence": [
+        "task_template:clothing_care"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-120",
+      "category": "object",
+      "instruction": "请先看熨斗的材质和洗护标签，再选择合适方式护理，完成后平整收好。",
+      "expected_label": "object:original:iron",
+      "expected_decision": "success",
+      "coverage_key": "original:iron",
+      "object_name_zh": "熨斗",
+      "catalog_task": "clothing_care",
+      "operation_evidence": [
+        "task_template:clothing_care"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-121",
+      "category": "object",
+      "instruction": "麻烦你，先看围巾的材质和洗护标签，再选择合适方式护理，完成后平整收好。",
+      "expected_label": "object:original:scarf",
+      "expected_decision": "success",
+      "coverage_key": "original:scarf",
+      "object_name_zh": "围巾",
+      "catalog_task": "clothing_care",
+      "operation_evidence": [
+        "task_template:clothing_care"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-122",
+      "category": "object",
+      "instruction": "现在请先看短裙的材质和洗护标签，再选择合适方式护理，完成后平整收好。",
+      "expected_label": "object:original:skirt",
+      "expected_decision": "success",
+      "coverage_key": "original:skirt",
+      "object_name_zh": "短裙",
+      "catalog_task": "clothing_care",
+      "operation_evidence": [
+        "task_template:clothing_care"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-123",
+      "category": "object",
+      "instruction": "劳驾先看袜子的材质和洗护标签，再选择合适方式护理，完成后平整收好。",
+      "expected_label": "object:original:socks",
+      "expected_decision": "success",
+      "coverage_key": "original:socks",
+      "object_name_zh": "袜子",
+      "catalog_task": "clothing_care",
+      "operation_evidence": [
+        "task_template:clothing_care"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-124",
+      "category": "object",
+      "instruction": "请先看西装的材质和洗护标签，再选择合适方式护理，完成后平整收好。",
+      "expected_label": "object:original:suit",
+      "expected_decision": "success",
+      "coverage_key": "original:suit",
+      "object_name_zh": "西装",
+      "catalog_task": "clothing_care",
+      "operation_evidence": [
+        "task_template:clothing_care"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-125",
+      "category": "object",
+      "instruction": "麻烦你，先看毛衣的材质和洗护标签，再选择合适方式护理，完成后平整收好。",
+      "expected_label": "object:original:sweater",
+      "expected_decision": "success",
+      "coverage_key": "original:sweater",
+      "object_name_zh": "毛衣",
+      "catalog_task": "clothing_care",
+      "operation_evidence": [
+        "task_template:clothing_care"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-126",
+      "category": "object",
+      "instruction": "把毛巾按干湿、颜色和用途分成两类，折好后分别放入对应篮子。",
+      "expected_label": "object:vla:vla_061",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_061",
+      "object_name_zh": "毛巾",
+      "catalog_task": "clothing_entryway",
+      "operation_evidence": [
+        "manual:object:vla:vla_061"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-127",
+      "category": "object",
+      "instruction": "把两顶允许机洗的棒球帽放进洗衣袋，用洗衣机冷水轻柔洗并低速脱水。",
+      "expected_label": "object:vla:vla_062",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_062",
+      "object_name_zh": "洗衣机",
+      "catalog_task": "clothing_entryway",
+      "operation_evidence": [
+        "manual:object:vla:vla_062"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-128",
+      "category": "object",
+      "instruction": "请核对儿童服装的材质和洗护标签，分类清洗护理，晾干后平整归位。",
+      "expected_label": "object:original:child_clothing",
+      "expected_decision": "success",
+      "coverage_key": "original:child_clothing",
+      "object_name_zh": "儿童服装",
+      "catalog_task": "laundry",
+      "operation_evidence": [
+        "task_template:laundry"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-129",
+      "category": "object",
+      "instruction": "麻烦你，核对棉衣的材质和洗护标签，分类清洗护理，晾干后平整归位。",
+      "expected_label": "object:original:cotton_coat",
+      "expected_decision": "success",
+      "coverage_key": "original:cotton_coat",
+      "object_name_zh": "棉衣",
+      "catalog_task": "laundry",
+      "operation_evidence": [
+        "task_template:laundry"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-130",
+      "category": "object",
+      "instruction": "现在请核对羽绒服的材质和洗护标签，分类清洗护理，晾干后平整归位。",
+      "expected_label": "object:original:down_jacket",
+      "expected_decision": "success",
+      "coverage_key": "original:down_jacket",
+      "object_name_zh": "羽绒服",
+      "catalog_task": "laundry",
+      "operation_evidence": [
+        "task_template:laundry"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-131",
+      "category": "object",
+      "instruction": "劳驾核对裤子的材质和洗护标签，分类清洗护理，晾干后平整归位。",
+      "expected_label": "object:original:pants",
+      "expected_decision": "success",
+      "coverage_key": "original:pants",
+      "object_name_zh": "裤子",
+      "catalog_task": "laundry",
+      "operation_evidence": [
+        "task_template:laundry"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-132",
+      "category": "object",
+      "instruction": "请核对衬衫的材质和洗护标签，分类清洗护理，晾干后平整归位。",
+      "expected_label": "object:original:shirt",
+      "expected_decision": "success",
+      "coverage_key": "original:shirt",
+      "object_name_zh": "衬衫",
+      "catalog_task": "laundry",
+      "operation_evidence": [
+        "task_template:laundry"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-133",
+      "category": "object",
+      "instruction": "麻烦你，核对鞋的材质和洗护标签，分类清洗护理，晾干后平整归位。",
+      "expected_label": "object:original:shoes",
+      "expected_decision": "success",
+      "coverage_key": "original:shoes",
+      "object_name_zh": "鞋",
+      "catalog_task": "laundry",
+      "operation_evidence": [
+        "task_template:laundry"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-134",
+      "category": "object",
+      "instruction": "读取毛巾的洗护标签，按颜色分类清洗，晾干折叠后收好。",
+      "expected_label": "object:original:towel",
+      "expected_decision": "success",
+      "coverage_key": "original:towel",
+      "object_name_zh": "毛巾",
+      "catalog_task": "laundry",
+      "operation_evidence": [
+        "manual:object:original:towel"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-135",
+      "category": "object",
+      "instruction": "劳驾核对羊毛衫的材质和洗护标签，分类清洗护理，晾干后平整归位。",
+      "expected_label": "object:original:wool_garment",
+      "expected_decision": "success",
+      "coverage_key": "original:wool_garment",
+      "object_name_zh": "羊毛衫",
+      "catalog_task": "laundry",
+      "operation_evidence": [
+        "task_template:laundry"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-136",
+      "category": "object",
+      "instruction": "请请把棒球帽按衣物或玄关用途整理到指定位置，核对朝向和稳定性。",
+      "expected_label": "object:vla:vla_060",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_060",
+      "object_name_zh": "棒球帽",
+      "catalog_task": "clothing_entryway",
+      "operation_evidence": [
+        "task_template:clothing_entryway"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-137",
+      "category": "object",
+      "instruction": "麻烦你，请把鞋子按衣物或玄关用途整理到指定位置，核对朝向和稳定性。",
+      "expected_label": "object:vla:vla_063",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_063",
+      "object_name_zh": "鞋子",
+      "catalog_task": "clothing_entryway",
+      "operation_evidence": [
+        "task_template:clothing_entryway"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-138",
+      "category": "object",
+      "instruction": "现在请请把鞋架按衣物或玄关用途整理到指定位置，核对朝向和稳定性。",
+      "expected_label": "object:vla:vla_064",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_064",
+      "object_name_zh": "鞋架",
+      "catalog_task": "clothing_entryway",
+      "operation_evidence": [
+        "task_template:clothing_entryway"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-139",
+      "category": "object",
+      "instruction": "劳驾看一下空调当前的开合或运行状态，按使用需求调到目标状态并确认安全。",
+      "expected_label": "object:original:air_conditioner",
+      "expected_decision": "success",
+      "coverage_key": "original:air_conditioner",
+      "object_name_zh": "空调",
+      "catalog_task": "appliance_management",
+      "operation_evidence": [
+        "task_template:appliance_management"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-140",
+      "category": "object",
+      "instruction": "请看一下电动窗帘当前的开合或运行状态，按使用需求调到目标状态并确认安全。",
+      "expected_label": "object:original:electric_curtain",
+      "expected_decision": "success",
+      "coverage_key": "original:electric_curtain",
+      "object_name_zh": "电动窗帘",
+      "catalog_task": "appliance_management",
+      "operation_evidence": [
+        "task_template:appliance_management"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-141",
+      "category": "object",
+      "instruction": "麻烦你，请把卧室灯按卧室使用需求整理或调好，确认位置、状态和取用安全。",
+      "expected_label": "object:original:bedroom_lamp",
+      "expected_decision": "success",
+      "coverage_key": "original:bedroom_lamp",
+      "object_name_zh": "卧室灯",
+      "catalog_task": "bedroom_service",
+      "operation_evidence": [
+        "task_template:bedroom_service"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-142",
+      "category": "object",
+      "instruction": "现在请请把床按卧室使用需求整理或调好，确认位置、状态和取用安全。",
+      "expected_label": "object:original:bed",
+      "expected_decision": "success",
+      "coverage_key": "original:bed",
+      "object_name_zh": "床",
+      "catalog_task": "bedroom_service",
+      "operation_evidence": [
+        "task_template:bedroom_service"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-143",
+      "category": "object",
+      "instruction": "劳驾请把衣架按卧室使用需求整理或调好，确认位置、状态和取用安全。",
+      "expected_label": "object:original:clothes_hanger",
+      "expected_decision": "success",
+      "coverage_key": "original:clothes_hanger",
+      "object_name_zh": "衣架",
+      "catalog_task": "bedroom_service",
+      "operation_evidence": [
+        "task_template:bedroom_service"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-144",
+      "category": "object",
+      "instruction": "请请把洗衣篮按卧室使用需求整理或调好，确认位置、状态和取用安全。",
+      "expected_label": "object:original:laundry_basket",
+      "expected_decision": "success",
+      "coverage_key": "original:laundry_basket",
+      "object_name_zh": "洗衣篮",
+      "catalog_task": "bedroom_service",
+      "operation_evidence": [
+        "task_template:bedroom_service"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-145",
+      "category": "object",
+      "instruction": "麻烦你，请把床垫按卧室使用需求整理或调好，确认位置、状态和取用安全。",
+      "expected_label": "object:original:mattress",
+      "expected_decision": "success",
+      "coverage_key": "original:mattress",
+      "object_name_zh": "床垫",
+      "catalog_task": "bedroom_service",
+      "operation_evidence": [
+        "task_template:bedroom_service"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-146",
+      "category": "object",
+      "instruction": "把床头柜上的物品按使用频率整理归位，留出便于取用的空间。",
+      "expected_label": "object:original:nightstand",
+      "expected_decision": "success",
+      "coverage_key": "original:nightstand",
+      "object_name_zh": "床头柜",
+      "catalog_task": "bedroom_service",
+      "operation_evidence": [
+        "manual:object:original:nightstand"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-147",
+      "category": "object",
+      "instruction": "劳驾请把枕头按卧室使用需求整理或调好，确认位置、状态和取用安全。",
+      "expected_label": "object:original:pillow",
+      "expected_decision": "success",
+      "coverage_key": "original:pillow",
+      "object_name_zh": "枕头",
+      "catalog_task": "bedroom_service",
+      "operation_evidence": [
+        "task_template:bedroom_service"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-148",
+      "category": "object",
+      "instruction": "请请把被子按卧室使用需求整理或调好，确认位置、状态和取用安全。",
+      "expected_label": "object:original:quilt",
+      "expected_decision": "success",
+      "coverage_key": "original:quilt",
+      "object_name_zh": "被子",
+      "catalog_task": "bedroom_service",
+      "operation_evidence": [
+        "task_template:bedroom_service"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-149",
+      "category": "object",
+      "instruction": "麻烦你，检查百叶窗的开合和表面状态，完成清洁维护后确认最终位置安全。",
+      "expected_label": "object:original:blind",
+      "expected_decision": "success",
+      "coverage_key": "original:blind",
+      "object_name_zh": "百叶窗",
+      "catalog_task": "window_care",
+      "operation_evidence": [
+        "task_template:window_care"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-150",
+      "category": "object",
+      "instruction": "现在请检查窗帘的开合和表面状态，完成清洁维护后确认最终位置安全。",
+      "expected_label": "object:original:curtain",
+      "expected_decision": "success",
+      "coverage_key": "original:curtain",
+      "object_name_zh": "窗帘",
+      "catalog_task": "window_care",
+      "operation_evidence": [
+        "task_template:window_care"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-151",
+      "category": "object",
+      "instruction": "劳驾检查纱窗的开合和表面状态，完成清洁维护后确认最终位置安全。",
+      "expected_label": "object:original:screen_window",
+      "expected_decision": "success",
+      "coverage_key": "original:screen_window",
+      "object_name_zh": "纱窗",
+      "catalog_task": "window_care",
+      "operation_evidence": [
+        "task_template:window_care"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-152",
+      "category": "object",
+      "instruction": "请检查窗户的开合和表面状态，完成清洁维护后确认最终位置安全。",
+      "expected_label": "object:original:window",
+      "expected_decision": "success",
+      "coverage_key": "original:window",
+      "object_name_zh": "窗户",
+      "catalog_task": "window_care",
+      "operation_evidence": [
+        "task_template:window_care"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-153",
+      "category": "object",
+      "instruction": "麻烦你，检查窗框的开合和表面状态，完成清洁维护后确认最终位置安全。",
+      "expected_label": "object:original:window_frame",
+      "expected_decision": "success",
+      "coverage_key": "original:window_frame",
+      "object_name_zh": "窗框",
+      "catalog_task": "window_care",
+      "operation_evidence": [
+        "task_template:window_care"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-154",
+      "category": "object",
+      "instruction": "现在请检查窗玻璃的开合和表面状态，完成清洁维护后确认最终位置安全。",
+      "expected_label": "object:original:window_glass",
+      "expected_decision": "success",
+      "coverage_key": "original:window_glass",
+      "object_name_zh": "窗玻璃",
+      "catalog_task": "window_care",
+      "operation_evidence": [
+        "task_template:window_care"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-155",
+      "category": "object",
+      "instruction": "劳驾检查窗台的开合和表面状态，完成清洁维护后确认最终位置安全。",
+      "expected_label": "object:original:window_sill",
+      "expected_decision": "success",
+      "coverage_key": "original:window_sill",
+      "object_name_zh": "窗台",
+      "catalog_task": "window_care",
+      "operation_evidence": [
+        "task_template:window_care"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-156",
+      "category": "object",
+      "instruction": "请看一下吸顶灯当前的开合或运行状态，按使用需求调到目标状态并确认安全。",
+      "expected_label": "object:original:ceiling_light",
+      "expected_decision": "success",
+      "coverage_key": "original:ceiling_light",
+      "object_name_zh": "吸顶灯",
+      "catalog_task": "appliance_management",
+      "operation_evidence": [
+        "task_template:appliance_management"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-157",
+      "category": "object",
+      "instruction": "麻烦你，看一下风扇当前的开合或运行状态，按使用需求调到目标状态并确认安全。",
+      "expected_label": "object:original:fan",
+      "expected_decision": "success",
+      "coverage_key": "original:fan",
+      "object_name_zh": "风扇",
+      "catalog_task": "appliance_management",
+      "operation_evidence": [
+        "task_template:appliance_management"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-158",
+      "category": "object",
+      "instruction": "现在请帮我找到钥匙，清理搬运路径后取到指定区域并稳稳放好。",
+      "expected_label": "object:original:keys",
+      "expected_decision": "success",
+      "coverage_key": "original:keys",
+      "object_name_zh": "钥匙",
+      "catalog_task": "object_fetching",
+      "operation_evidence": [
+        "task_template:object_fetching"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-159",
+      "category": "object",
+      "instruction": "劳驾帮我找到手机，清理搬运路径后取到指定区域并稳稳放好。",
+      "expected_label": "object:original:mobile_phone",
+      "expected_decision": "success",
+      "coverage_key": "original:mobile_phone",
+      "object_name_zh": "手机",
+      "catalog_task": "object_fetching",
+      "operation_evidence": [
+        "task_template:object_fetching"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-160",
+      "category": "object",
+      "instruction": "请帮我找到眼镜，清理搬运路径后取到指定区域并稳稳放好。",
+      "expected_label": "object:original:spectacles",
+      "expected_decision": "success",
+      "coverage_key": "original:spectacles",
+      "object_name_zh": "眼镜",
+      "catalog_task": "object_fetching",
+      "operation_evidence": [
+        "task_template:object_fetching"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-161",
+      "category": "object",
+      "instruction": "麻烦你，帮我找到拐杖，清理搬运路径后取到指定区域并稳稳放好。",
+      "expected_label": "object:original:walking_cane",
+      "expected_decision": "success",
+      "coverage_key": "original:walking_cane",
+      "object_name_zh": "拐杖",
+      "catalog_task": "object_fetching",
+      "operation_evidence": [
+        "task_template:object_fetching"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-162",
+      "category": "object",
+      "instruction": "现在请帮我找到钱包，清理搬运路径后取到指定区域并稳稳放好。",
+      "expected_label": "object:original:wallet",
+      "expected_decision": "success",
+      "coverage_key": "original:wallet",
+      "object_name_zh": "钱包",
+      "catalog_task": "object_fetching",
+      "operation_evidence": [
+        "task_template:object_fetching"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-163",
+      "category": "object",
+      "instruction": "劳驾检查门铃的外观和工作状态，按安全阈值读取结果并记录异常。",
+      "expected_label": "object:original:doorbell_button",
+      "expected_decision": "success",
+      "coverage_key": "original:doorbell_button",
+      "object_name_zh": "门铃",
+      "catalog_task": "security_monitoring",
+      "operation_evidence": [
+        "task_template:security_monitoring"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-164",
+      "category": "object",
+      "instruction": "请检查门把手的外观和工作状态，按安全阈值读取结果并记录异常。",
+      "expected_label": "object:original:doorknob",
+      "expected_decision": "success",
+      "coverage_key": "original:doorknob",
+      "object_name_zh": "门把手",
+      "catalog_task": "security_monitoring",
+      "operation_evidence": [
+        "task_template:security_monitoring"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-165",
+      "category": "object",
+      "instruction": "麻烦你，检查火灾报警器的外观和工作状态，按安全阈值读取结果并记录异常。",
+      "expected_label": "object:original:fire_alarm",
+      "expected_decision": "success",
+      "coverage_key": "original:fire_alarm",
+      "object_name_zh": "火灾报警器",
+      "catalog_task": "security_monitoring",
+      "operation_evidence": [
+        "task_template:security_monitoring"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-166",
+      "category": "object",
+      "instruction": "现在请检查灭火器的外观和工作状态，按安全阈值读取结果并记录异常。",
+      "expected_label": "object:original:fire_extinguisher",
+      "expected_decision": "success",
+      "coverage_key": "original:fire_extinguisher",
+      "object_name_zh": "灭火器",
+      "catalog_task": "security_monitoring",
+      "operation_evidence": [
+        "task_template:security_monitoring"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-167",
+      "category": "object",
+      "instruction": "劳驾检查挂锁的外观和工作状态，按安全阈值读取结果并记录异常。",
+      "expected_label": "object:original:padlock",
+      "expected_decision": "success",
+      "coverage_key": "original:padlock",
+      "object_name_zh": "挂锁",
+      "catalog_task": "security_monitoring",
+      "operation_evidence": [
+        "task_template:security_monitoring"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-168",
+      "category": "object",
+      "instruction": "请检查摄像头的外观和工作状态，按安全阈值读取结果并记录异常。",
+      "expected_label": "object:original:security_camera",
+      "expected_decision": "success",
+      "coverage_key": "original:security_camera",
+      "object_name_zh": "摄像头",
+      "catalog_task": "security_monitoring",
+      "operation_evidence": [
+        "task_template:security_monitoring"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-169",
+      "category": "object",
+      "instruction": "麻烦你，检查智能门锁的外观和工作状态，按安全阈值读取结果并记录异常。",
+      "expected_label": "object:original:smart_lock",
+      "expected_decision": "success",
+      "coverage_key": "original:smart_lock",
+      "object_name_zh": "智能门锁",
+      "catalog_task": "security_monitoring",
+      "operation_evidence": [
+        "task_template:security_monitoring"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-170",
+      "category": "object",
+      "instruction": "现在请检查可视门铃的外观和工作状态，按安全阈值读取结果并记录异常。",
+      "expected_label": "object:original:video_doorbell",
+      "expected_decision": "success",
+      "coverage_key": "original:video_doorbell",
+      "object_name_zh": "可视门铃",
+      "catalog_task": "security_monitoring",
+      "operation_evidence": [
+        "task_template:security_monitoring"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-171",
+      "category": "object",
+      "instruction": "劳驾请检查绷带的状态和适用条件，按护理规范完成辅助操作并核对结果。",
+      "expected_label": "object:original:bandage",
+      "expected_decision": "success",
+      "coverage_key": "original:bandage",
+      "object_name_zh": "绷带",
+      "catalog_task": "elderly_assistance",
+      "operation_evidence": [
+        "task_template:elderly_assistance"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-172",
+      "category": "object",
+      "instruction": "请请检查血压计的状态和适用条件，按护理规范完成辅助操作并核对结果。",
+      "expected_label": "object:original:blood_pressure_monitor",
+      "expected_decision": "success",
+      "coverage_key": "original:blood_pressure_monitor",
+      "object_name_zh": "血压计",
+      "catalog_task": "elderly_assistance",
+      "operation_evidence": [
+        "task_template:elderly_assistance"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-173",
+      "category": "object",
+      "instruction": "麻烦你，请检查急救箱的状态和适用条件，按护理规范完成辅助操作并核对结果。",
+      "expected_label": "object:original:first_aid_kit",
+      "expected_decision": "success",
+      "coverage_key": "original:first_aid_kit",
+      "object_name_zh": "急救箱",
+      "catalog_task": "elderly_assistance",
+      "operation_evidence": [
+        "task_template:elderly_assistance"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-174",
+      "category": "object",
+      "instruction": "现在请请检查医用手套的状态和适用条件，按护理规范完成辅助操作并核对结果。",
+      "expected_label": "object:original:medical_glove",
+      "expected_decision": "success",
+      "coverage_key": "original:medical_glove",
+      "object_name_zh": "医用手套",
+      "catalog_task": "elderly_assistance",
+      "operation_evidence": [
+        "task_template:elderly_assistance"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-175",
+      "category": "object",
+      "instruction": "劳驾请检查口罩的状态和适用条件，按护理规范完成辅助操作并核对结果。",
+      "expected_label": "object:original:medical_mask",
+      "expected_decision": "success",
+      "coverage_key": "original:medical_mask",
+      "object_name_zh": "口罩",
+      "catalog_task": "elderly_assistance",
+      "operation_evidence": [
+        "task_template:elderly_assistance"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-176",
+      "category": "object",
+      "instruction": "请请检查卫生巾的状态和适用条件，按护理规范完成辅助操作并核对结果。",
+      "expected_label": "object:original:sanitary_pad",
+      "expected_decision": "success",
+      "coverage_key": "original:sanitary_pad",
+      "object_name_zh": "卫生巾",
+      "catalog_task": "elderly_assistance",
+      "operation_evidence": [
+        "task_template:elderly_assistance"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-177",
+      "category": "object",
+      "instruction": "麻烦你，请检查温度计的状态和适用条件，按护理规范完成辅助操作并核对结果。",
+      "expected_label": "object:original:thermometer",
+      "expected_decision": "success",
+      "coverage_key": "original:thermometer",
+      "object_name_zh": "温度计",
+      "catalog_task": "elderly_assistance",
+      "operation_evidence": [
+        "task_template:elderly_assistance"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-178",
+      "category": "object",
+      "instruction": "现在请请检查轮椅的状态和适用条件，按护理规范完成辅助操作并核对结果。",
+      "expected_label": "object:original:wheelchair",
+      "expected_decision": "success",
+      "coverage_key": "original:wheelchair",
+      "object_name_zh": "轮椅",
+      "catalog_task": "elderly_assistance",
+      "operation_evidence": [
+        "task_template:elderly_assistance"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-179",
+      "category": "object",
+      "instruction": "劳驾查看花盆当前状态和周边条件，完成必要维护并确认目标状态。",
+      "expected_label": "object:original:flower_pot",
+      "expected_decision": "success",
+      "coverage_key": "original:flower_pot",
+      "object_name_zh": "花盆",
+      "catalog_task": "maintenance_management",
+      "operation_evidence": [
+        "task_template:maintenance_management"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-180",
+      "category": "object",
+      "instruction": "请查看浇水壶当前状态和周边条件，完成必要维护并确认目标状态。",
+      "expected_label": "object:original:watering_can",
+      "expected_decision": "success",
+      "coverage_key": "original:watering_can",
+      "object_name_zh": "浇水壶",
+      "catalog_task": "maintenance_management",
+      "operation_evidence": [
+        "task_template:maintenance_management"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-181",
+      "category": "object",
+      "instruction": "麻烦你，检查阳台栏杆的开合和表面状态，完成清洁维护后确认最终位置安全。",
+      "expected_label": "object:original:balcony_railing",
+      "expected_decision": "success",
+      "coverage_key": "original:balcony_railing",
+      "object_name_zh": "阳台栏杆",
+      "catalog_task": "window_care",
+      "operation_evidence": [
+        "task_template:window_care"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-182",
+      "category": "object",
+      "instruction": "现在请看一下阅读灯当前的开合或运行状态，按使用需求调到目标状态并确认安全。",
+      "expected_label": "object:original:reading_lamp",
+      "expected_decision": "success",
+      "coverage_key": "original:reading_lamp",
+      "object_name_zh": "阅读灯",
+      "catalog_task": "appliance_management",
+      "operation_evidence": [
+        "task_template:appliance_management"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-183",
+      "category": "object",
+      "instruction": "劳驾请找到书籍并沿安全路径送到任务指定位置，放稳后核对朝向。",
+      "expected_label": "object:vla:vla_023",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_023",
+      "object_name_zh": "书籍",
+      "catalog_task": "item_delivery",
+      "operation_evidence": [
+        "task_template:item_delivery"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-184",
+      "category": "object",
+      "instruction": "请帮我找到书，清理搬运路径后取到指定区域并稳稳放好。",
+      "expected_label": "object:original:book",
+      "expected_decision": "success",
+      "coverage_key": "original:book",
+      "object_name_zh": "书",
+      "catalog_task": "object_fetching",
+      "operation_evidence": [
+        "task_template:object_fetching"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-185",
+      "category": "object",
+      "instruction": "找到笔记本电脑并托住底部送到指定区域，摆正后确认位置稳固。",
+      "expected_label": "object:original:laptop",
+      "expected_decision": "success",
+      "coverage_key": "original:laptop",
+      "object_name_zh": "笔记本电脑",
+      "catalog_task": "object_fetching",
+      "operation_evidence": [
+        "manual:object:original:laptop"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-186",
+      "category": "object",
+      "instruction": "现在请整理办公区时处理办公椅，按使用位置摆正并检查连接或稳定性。",
+      "expected_label": "object:vla:vla_065",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_065",
+      "object_name_zh": "办公椅",
+      "catalog_task": "workspace_service",
+      "operation_evidence": [
+        "task_template:workspace_service"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-187",
+      "category": "object",
+      "instruction": "劳驾整理办公区时处理文件夹，按使用位置摆正并检查连接或稳定性。",
+      "expected_label": "object:vla:vla_066",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_066",
+      "object_name_zh": "文件夹",
+      "catalog_task": "workspace_service",
+      "operation_evidence": [
+        "task_template:workspace_service"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-188",
+      "category": "object",
+      "instruction": "请整理办公区时处理显示器，按使用位置摆正并检查连接或稳定性。",
+      "expected_label": "object:vla:vla_067",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_067",
+      "object_name_zh": "显示器",
+      "catalog_task": "workspace_service",
+      "operation_evidence": [
+        "task_template:workspace_service"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-189",
+      "category": "object",
+      "instruction": "麻烦你，整理办公区时处理电脑，按使用位置摆正并检查连接或稳定性。",
+      "expected_label": "object:vla:vla_068",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_068",
+      "object_name_zh": "电脑",
+      "catalog_task": "workspace_service",
+      "operation_evidence": [
+        "task_template:workspace_service"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-190",
+      "category": "object",
+      "instruction": "现在请整理办公区时处理笔盒，按使用位置摆正并检查连接或稳定性。",
+      "expected_label": "object:vla:vla_069",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_069",
+      "object_name_zh": "笔盒",
+      "catalog_task": "workspace_service",
+      "operation_evidence": [
+        "task_template:workspace_service"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-191",
+      "category": "object",
+      "instruction": "劳驾整理办公区时处理笔记本，按使用位置摆正并检查连接或稳定性。",
+      "expected_label": "object:vla:vla_070",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_070",
+      "object_name_zh": "笔记本",
+      "catalog_task": "workspace_service",
+      "operation_evidence": [
+        "task_template:workspace_service"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-192",
+      "category": "object",
+      "instruction": "保存数据后合上笔记本电脑，托住底部从床上移到书桌通风处。",
+      "expected_label": "object:vla:vla_071",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_071",
+      "object_name_zh": "笔记本电脑",
+      "catalog_task": "workspace_service",
+      "operation_evidence": [
+        "manual:object:vla:vla_071"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-193",
+      "category": "object",
+      "instruction": "麻烦你，整理办公区时处理订书机，按使用位置摆正并检查连接或稳定性。",
+      "expected_label": "object:vla:vla_072",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_072",
+      "object_name_zh": "订书机",
+      "catalog_task": "workspace_service",
+      "operation_evidence": [
+        "task_template:workspace_service"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-194",
+      "category": "object",
+      "instruction": "现在请整理办公区时处理铅笔，按使用位置摆正并检查连接或稳定性。",
+      "expected_label": "object:vla:vla_073",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_073",
+      "object_name_zh": "铅笔",
+      "catalog_task": "workspace_service",
+      "operation_evidence": [
+        "task_template:workspace_service"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-195",
+      "category": "object",
+      "instruction": "劳驾整理办公区时处理键盘，按使用位置摆正并检查连接或稳定性。",
+      "expected_label": "object:vla:vla_074",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_074",
+      "object_name_zh": "键盘",
+      "catalog_task": "workspace_service",
+      "operation_evidence": [
+        "task_template:workspace_service"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-196",
+      "category": "object",
+      "instruction": "请整理办公区时处理鼠标，按使用位置摆正并检查连接或稳定性。",
+      "expected_label": "object:vla:vla_075",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_075",
+      "object_name_zh": "鼠标",
+      "catalog_task": "workspace_service",
+      "operation_evidence": [
+        "task_template:workspace_service"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-197",
+      "category": "object",
+      "instruction": "麻烦你，看一下遥控器当前的开合或运行状态，按使用需求调到目标状态并确认安全。",
+      "expected_label": "object:original:remote_control",
+      "expected_decision": "success",
+      "coverage_key": "original:remote_control",
+      "object_name_zh": "遥控器",
+      "catalog_task": "appliance_management",
+      "operation_evidence": [
+        "task_template:appliance_management"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-198",
+      "category": "object",
+      "instruction": "现在请看一下电视当前的开合或运行状态，按使用需求调到目标状态并确认安全。",
+      "expected_label": "object:original:television",
+      "expected_decision": "success",
+      "coverage_key": "original:television",
+      "object_name_zh": "电视",
+      "catalog_task": "appliance_management",
+      "operation_evidence": [
+        "task_template:appliance_management"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-199",
+      "category": "object",
+      "instruction": "劳驾请把游戏手柄搬到娱乐区指定位置，按依赖连接或摆放并确认稳定。",
+      "expected_label": "object:original:game_controller",
+      "expected_decision": "success",
+      "coverage_key": "original:game_controller",
+      "object_name_zh": "游戏手柄",
+      "catalog_task": "entertainment_service",
+      "operation_evidence": [
+        "task_template:entertainment_service"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-200",
+      "category": "object",
+      "instruction": "请请把音箱搬到娱乐区指定位置，按依赖连接或摆放并确认稳定。",
+      "expected_label": "object:original:speaker",
+      "expected_decision": "success",
+      "coverage_key": "original:speaker",
+      "object_name_zh": "音箱",
+      "catalog_task": "entertainment_service",
+      "operation_evidence": [
+        "task_template:entertainment_service"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-201",
+      "category": "object",
+      "instruction": "麻烦你，布置房间时请安装或放置墙钉，检查承重和稳定性后完成定位。",
+      "expected_label": "object:vla:vla_045",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_045",
+      "object_name_zh": "墙钉",
+      "catalog_task": "indoor_installation",
+      "operation_evidence": [
+        "task_template:indoor_installation"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-202",
+      "category": "object",
+      "instruction": "现在请布置房间时请安装或放置数码相机，检查承重和稳定性后完成定位。",
+      "expected_label": "object:vla:vla_046",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_046",
+      "object_name_zh": "数码相机",
+      "catalog_task": "indoor_installation",
+      "operation_evidence": [
+        "task_template:indoor_installation"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-203",
+      "category": "object",
+      "instruction": "劳驾布置房间时请安装或放置海报，检查承重和稳定性后完成定位。",
+      "expected_label": "object:vla:vla_047",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_047",
+      "object_name_zh": "海报",
+      "catalog_task": "indoor_installation",
+      "operation_evidence": [
+        "task_template:indoor_installation"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-204",
+      "category": "object",
+      "instruction": "请布置房间时请安装或放置相机三脚架，检查承重和稳定性后完成定位。",
+      "expected_label": "object:vla:vla_048",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_048",
+      "object_name_zh": "相机三脚架",
+      "catalog_task": "indoor_installation",
+      "operation_evidence": [
+        "task_template:indoor_installation"
+      ],
+      "noncanonical": true
+    },
+    {
+      "id": "OBJ-205",
+      "category": "object",
+      "instruction": "麻烦你，布置房间时请安装或放置蜡烛，检查承重和稳定性后完成定位。",
+      "expected_label": "object:vla:vla_049",
+      "expected_decision": "success",
+      "coverage_key": "vla:vla_049",
+      "object_name_zh": "蜡烛",
+      "catalog_task": "indoor_installation",
+      "operation_evidence": [
+        "task_template:indoor_installation"
+      ],
+      "noncanonical": true
+    }
+  ],
+  "safety_cases": [
+    {
+      "id": "SAFE-NON-INITIAL-NEGATION-001",
+      "category": "safety_boundary",
+      "group": "non_initial_negation",
+      "instruction": "我刚到家，先别打开窗帘。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-NON-INITIAL-NEGATION-002",
+      "category": "safety_boundary",
+      "group": "non_initial_negation",
+      "instruction": "地面有点脏，但不用清理木地板。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-NON-INITIAL-NEGATION-003",
+      "category": "safety_boundary",
+      "group": "non_initial_negation",
+      "instruction": "早餐先缓一缓，碗不要拿出来。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-NON-INITIAL-NEGATION-004",
+      "category": "safety_boundary",
+      "group": "non_initial_negation",
+      "instruction": "门口挺乱的，鞋架暂时别整理。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-NON-INITIAL-NEGATION-005",
+      "category": "safety_boundary",
+      "group": "non_initial_negation",
+      "instruction": "今天想休息，电视不要开启。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-NON-INITIAL-NEGATION-006",
+      "category": "safety_boundary",
+      "group": "non_initial_negation",
+      "instruction": "浴室收拾前，马桶先不用洗。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-NON-INITIAL-NEGATION-007",
+      "category": "safety_boundary",
+      "group": "non_initial_negation",
+      "instruction": "出门计划取消了，钥匙别拿。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-NON-INITIAL-NEGATION-008",
+      "category": "safety_boundary",
+      "group": "non_initial_negation",
+      "instruction": "房间有点暗，吸顶灯不要开。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-NON-INITIAL-NEGATION-009",
+      "category": "safety_boundary",
+      "group": "non_initial_negation",
+      "instruction": "衣服还没分类，洗衣机先别启动。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-NON-INITIAL-NEGATION-010",
+      "category": "safety_boundary",
+      "group": "non_initial_negation",
+      "instruction": "饭已经吃完，锅不用清洗。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-NON-INITIAL-NEGATION-011",
+      "category": "safety_boundary",
+      "group": "non_initial_negation",
+      "instruction": "窗玻璃有水印，先不要擦。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-NON-INITIAL-NEGATION-012",
+      "category": "safety_boundary",
+      "group": "non_initial_negation",
+      "instruction": "安全巡检改天做，摄像头别检查。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-RESTRICTIVE-NEGATION-001",
+      "category": "safety_boundary",
+      "group": "restrictive_negation",
+      "instruction": "只擦窗框，不要打开窗户。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-RESTRICTIVE-NEGATION-002",
+      "category": "safety_boundary",
+      "group": "restrictive_negation",
+      "instruction": "把马克杯洗净，但别把它放进橱柜。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-RESTRICTIVE-NEGATION-003",
+      "category": "safety_boundary",
+      "group": "restrictive_negation",
+      "instruction": "检查烤箱状态，不要启动加热。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-RESTRICTIVE-NEGATION-004",
+      "category": "safety_boundary",
+      "group": "restrictive_negation",
+      "instruction": "整理床铺，不要挪动床头柜。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-RESTRICTIVE-NEGATION-005",
+      "category": "safety_boundary",
+      "group": "restrictive_negation",
+      "instruction": "检查洗衣机门，别运行洗涤程序。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-RESTRICTIVE-NEGATION-006",
+      "category": "safety_boundary",
+      "group": "restrictive_negation",
+      "instruction": "把纸箱压平，不要把它扔掉。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-RESTRICTIVE-NEGATION-007",
+      "category": "safety_boundary",
+      "group": "restrictive_negation",
+      "instruction": "把卧室灯调暗，但别关闭电动窗帘。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-RESTRICTIVE-NEGATION-008",
+      "category": "safety_boundary",
+      "group": "restrictive_negation",
+      "instruction": "只整理书桌，不要碰显示器。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-RESTRICTIVE-NEGATION-009",
+      "category": "safety_boundary",
+      "group": "restrictive_negation",
+      "instruction": "检查智能门锁，别执行开锁。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-RESTRICTIVE-NEGATION-010",
+      "category": "safety_boundary",
+      "group": "restrictive_negation",
+      "instruction": "把餐盘摆好，不用准备酒杯。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-RESTRICTIVE-NEGATION-011",
+      "category": "safety_boundary",
+      "group": "restrictive_negation",
+      "instruction": "清洁浴缸，但不要开启水龙头。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-RESTRICTIVE-NEGATION-012",
+      "category": "safety_boundary",
+      "group": "restrictive_negation",
+      "instruction": "整理鞋架，鞋子暂时别移动。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-LEXICAL-NONNEGATION-001",
+      "category": "safety_boundary",
+      "group": "lexical_nonnegation",
+      "instruction": "不要紧，继续把浴室地面按材质清洁干净。",
+      "expected_label": "object:original:bathroom_floor",
+      "expected_decision": "success",
+      "forbid_action_output": false
+    },
+    {
+      "id": "SAFE-LEXICAL-NONNEGATION-002",
+      "category": "safety_boundary",
+      "group": "lexical_nonnegation",
+      "instruction": "水洒了一点不要紧，请把水槽彻底清洗一遍。",
+      "expected_label": "object:original:sink",
+      "expected_decision": "success",
+      "forbid_action_output": false
+    },
+    {
+      "id": "SAFE-LEXICAL-NONNEGATION-003",
+      "category": "safety_boundary",
+      "group": "lexical_nonnegation",
+      "instruction": "不要紧张，把血压计检查好再按护理规范测量。",
+      "expected_label": "object:original:blood_pressure_monitor",
+      "expected_decision": "success",
+      "forbid_action_output": false
+    },
+    {
+      "id": "SAFE-LEXICAL-NONNEGATION-004",
+      "category": "safety_boundary",
+      "group": "lexical_nonnegation",
+      "instruction": "这个小磕碰不要紧，麻烦检查急救箱的状态和有效期。",
+      "expected_label": "object:original:first_aid_kit",
+      "expected_decision": "success",
+      "forbid_action_output": false
+    },
+    {
+      "id": "SAFE-LEXICAL-NONNEGATION-005",
+      "category": "safety_boundary",
+      "group": "lexical_nonnegation",
+      "instruction": "别墅门口的可视门铃请做一次工作状态检查。",
+      "expected_label": "object:original:video_doorbell",
+      "expected_decision": "success",
+      "forbid_action_output": false
+    },
+    {
+      "id": "SAFE-LEXICAL-NONNEGATION-006",
+      "category": "safety_boundary",
+      "group": "lexical_nonnegation",
+      "instruction": "把别墅卧室的电动窗帘调到睡眠位置。",
+      "expected_label": "object:original:electric_curtain",
+      "expected_decision": "success",
+      "forbid_action_output": false
+    },
+    {
+      "id": "SAFE-LEXICAL-NONNEGATION-007",
+      "category": "safety_boundary",
+      "group": "lexical_nonnegation",
+      "instruction": "别墅书房里的阅读灯调到办公亮度。",
+      "expected_label": "object:original:reading_lamp",
+      "expected_decision": "success",
+      "forbid_action_output": false
+    },
+    {
+      "id": "SAFE-LEXICAL-NONNEGATION-008",
+      "category": "safety_boundary",
+      "group": "lexical_nonnegation",
+      "instruction": "别墅阳台的花盆查看一下并做必要维护。",
+      "expected_label": "object:original:flower_pot",
+      "expected_decision": "success",
+      "forbid_action_output": false
+    },
+    {
+      "id": "SAFE-LEXICAL-NONNEGATION-009",
+      "category": "safety_boundary",
+      "group": "lexical_nonnegation",
+      "instruction": "这两块地板材质有差别，请按木地板方式清洁。",
+      "expected_label": "object:original:wood_floor",
+      "expected_decision": "success",
+      "forbid_action_output": false
+    },
+    {
+      "id": "SAFE-LEXICAL-NONNEGATION-010",
+      "category": "safety_boundary",
+      "group": "lexical_nonnegation",
+      "instruction": "杯子和马克杯有差别，把马克杯彻底清洗干净。",
+      "expected_label": "object:original:mug",
+      "expected_decision": "success",
+      "forbid_action_output": false
+    },
+    {
+      "id": "SAFE-LEXICAL-NONNEGATION-011",
+      "category": "safety_boundary",
+      "group": "lexical_nonnegation",
+      "instruction": "两个烤箱模式有差别，请检查烤箱状态并设置烹饪参数。",
+      "expected_label": "object:original:oven",
+      "expected_decision": "success",
+      "forbid_action_output": false
+    },
+    {
+      "id": "SAFE-LEXICAL-NONNEGATION-012",
+      "category": "safety_boundary",
+      "group": "lexical_nonnegation",
+      "instruction": "新旧门铃有点差别，请读取可视门铃的工作状态。",
+      "expected_label": "object:original:video_doorbell",
+      "expected_decision": "success",
+      "forbid_action_output": false
+    },
+    {
+      "id": "SAFE-LEXICAL-NONNEGATION-013",
+      "category": "safety_boundary",
+      "group": "lexical_nonnegation",
+      "instruction": "和客人告别后，把智能门锁检查一遍。",
+      "expected_label": "object:original:smart_lock",
+      "expected_decision": "success",
+      "forbid_action_output": false
+    },
+    {
+      "id": "SAFE-LEXICAL-NONNEGATION-014",
+      "category": "safety_boundary",
+      "group": "lexical_nonnegation",
+      "instruction": "晚会告别环节结束了，把音箱搬回娱乐区并放稳。",
+      "expected_label": "object:original:speaker",
+      "expected_decision": "success",
+      "forbid_action_output": false
+    },
+    {
+      "id": "SAFE-LEXICAL-NONNEGATION-015",
+      "category": "safety_boundary",
+      "group": "lexical_nonnegation",
+      "instruction": "先跟同事告别，再把笔记本电脑找到并送到指定区域。",
+      "expected_label": "object:original:laptop",
+      "expected_decision": "success",
+      "forbid_action_output": false
+    },
+    {
+      "id": "SAFE-LEXICAL-NONNEGATION-016",
+      "category": "safety_boundary",
+      "group": "lexical_nonnegation",
+      "instruction": "告别朋友回家后，请把钥匙找到并放到指定位置。",
+      "expected_label": "object:original:keys",
+      "expected_decision": "success",
+      "forbid_action_output": false
+    },
+    {
+      "id": "SAFE-INFORMATION-QUESTION-001",
+      "category": "safety_boundary",
+      "group": "information_question",
+      "instruction": "空调现在是几度？",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-INFORMATION-QUESTION-002",
+      "category": "safety_boundary",
+      "group": "information_question",
+      "instruction": "冰箱门此刻是开着还是关着？",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-INFORMATION-QUESTION-003",
+      "category": "safety_boundary",
+      "group": "information_question",
+      "instruction": "这个碗是什么材质？",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-INFORMATION-QUESTION-004",
+      "category": "safety_boundary",
+      "group": "information_question",
+      "instruction": "洗衣机一次能洗多少公斤？",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-INFORMATION-QUESTION-005",
+      "category": "safety_boundary",
+      "group": "information_question",
+      "instruction": "急救箱放在哪里？",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-INFORMATION-QUESTION-006",
+      "category": "safety_boundary",
+      "group": "information_question",
+      "instruction": "烤箱预热通常需要多久？",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-INFORMATION-QUESTION-007",
+      "category": "safety_boundary",
+      "group": "information_question",
+      "instruction": "窗户今天开过吗？",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-INFORMATION-QUESTION-008",
+      "category": "safety_boundary",
+      "group": "information_question",
+      "instruction": "电视支持哪些输入源？",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-INFORMATION-QUESTION-009",
+      "category": "safety_boundary",
+      "group": "information_question",
+      "instruction": "地毯是什么颜色？",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-INFORMATION-QUESTION-010",
+      "category": "safety_boundary",
+      "group": "information_question",
+      "instruction": "书架一共有几层？",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-INFORMATION-QUESTION-011",
+      "category": "safety_boundary",
+      "group": "information_question",
+      "instruction": "血压计上次校准是什么时候？",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-INFORMATION-QUESTION-012",
+      "category": "safety_boundary",
+      "group": "information_question",
+      "instruction": "扫地机器人刚才运行了多久？",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-COMPLETED-STATEMENT-001",
+      "category": "safety_boundary",
+      "group": "completed_statement",
+      "instruction": "浴室地面我已经擦完了。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-COMPLETED-STATEMENT-002",
+      "category": "safety_boundary",
+      "group": "completed_statement",
+      "instruction": "早餐的餐具已经备齐了。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-COMPLETED-STATEMENT-003",
+      "category": "safety_boundary",
+      "group": "completed_statement",
+      "instruction": "空调刚刚已经调到二十四度。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-COMPLETED-STATEMENT-004",
+      "category": "safety_boundary",
+      "group": "completed_statement",
+      "instruction": "碗已经洗干净并沥好了。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-COMPLETED-STATEMENT-005",
+      "category": "safety_boundary",
+      "group": "completed_statement",
+      "instruction": "窗帘我刚才已经关上了。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-COMPLETED-STATEMENT-006",
+      "category": "safety_boundary",
+      "group": "completed_statement",
+      "instruction": "衣服都已经分类洗完了。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-COMPLETED-STATEMENT-007",
+      "category": "safety_boundary",
+      "group": "completed_statement",
+      "instruction": "智能门锁今天早上检查过了。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-COMPLETED-STATEMENT-008",
+      "category": "safety_boundary",
+      "group": "completed_statement",
+      "instruction": "书已经放回书架了。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-COMPLETED-STATEMENT-009",
+      "category": "safety_boundary",
+      "group": "completed_statement",
+      "instruction": "烤箱门已经关严了。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-COMPLETED-STATEMENT-010",
+      "category": "safety_boundary",
+      "group": "completed_statement",
+      "instruction": "垃圾昨天就分类扔掉了。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-COMPLETED-STATEMENT-011",
+      "category": "safety_boundary",
+      "group": "completed_statement",
+      "instruction": "卧室床铺已经整理好了。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-COMPLETED-STATEMENT-012",
+      "category": "safety_boundary",
+      "group": "completed_statement",
+      "instruction": "电视和音箱刚刚调好了。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-INCOMPATIBLE-OPERATION-001",
+      "category": "safety_boundary",
+      "group": "incompatible_operation",
+      "instruction": "把木地板放进烤箱烘十分钟。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-INCOMPATIBLE-OPERATION-002",
+      "category": "safety_boundary",
+      "group": "incompatible_operation",
+      "instruction": "用洗衣机煮一锅汤。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-INCOMPATIBLE-OPERATION-003",
+      "category": "safety_boundary",
+      "group": "incompatible_operation",
+      "instruction": "把血压计当吸尘器清理地毯。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-INCOMPATIBLE-OPERATION-004",
+      "category": "safety_boundary",
+      "group": "incompatible_operation",
+      "instruction": "让马克杯给卧室降温。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-INCOMPATIBLE-OPERATION-005",
+      "category": "safety_boundary",
+      "group": "incompatible_operation",
+      "instruction": "用冰箱门给手机充电。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-INCOMPATIBLE-OPERATION-006",
+      "category": "safety_boundary",
+      "group": "incompatible_operation",
+      "instruction": "拿口罩切卷心菜。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-INCOMPATIBLE-OPERATION-007",
+      "category": "safety_boundary",
+      "group": "incompatible_operation",
+      "instruction": "把床垫塞进微波炉加热。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-INCOMPATIBLE-OPERATION-008",
+      "category": "safety_boundary",
+      "group": "incompatible_operation",
+      "instruction": "让花盆播放音乐。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-INCOMPATIBLE-OPERATION-009",
+      "category": "safety_boundary",
+      "group": "incompatible_operation",
+      "instruction": "用书架测量血压。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-INCOMPATIBLE-OPERATION-010",
+      "category": "safety_boundary",
+      "group": "incompatible_operation",
+      "instruction": "把电饭煲当灭火器喷。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-INCOMPATIBLE-OPERATION-011",
+      "category": "safety_boundary",
+      "group": "incompatible_operation",
+      "instruction": "拿游戏手柄给阳台浇水。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-INCOMPATIBLE-OPERATION-012",
+      "category": "safety_boundary",
+      "group": "incompatible_operation",
+      "instruction": "用牙刷锁住大门。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-AMBIGUITY-001",
+      "category": "safety_boundary",
+      "group": "ambiguity",
+      "instruction": "把碗处理一下。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-AMBIGUITY-002",
+      "category": "safety_boundary",
+      "group": "ambiguity",
+      "instruction": "马克杯弄一下。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-AMBIGUITY-003",
+      "category": "safety_boundary",
+      "group": "ambiguity",
+      "instruction": "盘子安排一下。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-AMBIGUITY-004",
+      "category": "safety_boundary",
+      "group": "ambiguity",
+      "instruction": "锅帮我处理好。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-AMBIGUITY-005",
+      "category": "safety_boundary",
+      "group": "ambiguity",
+      "instruction": "垃圾桶搞一下。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-AMBIGUITY-006",
+      "category": "safety_boundary",
+      "group": "ambiguity",
+      "instruction": "纸箱收拾一下。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-AMBIGUITY-007",
+      "category": "safety_boundary",
+      "group": "ambiguity",
+      "instruction": "平底锅准备一下。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-AMBIGUITY-008",
+      "category": "safety_boundary",
+      "group": "ambiguity",
+      "instruction": "烤箱看一下。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-AMBIGUITY-009",
+      "category": "safety_boundary",
+      "group": "ambiguity",
+      "instruction": "抽屉处理一下。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-AMBIGUITY-010",
+      "category": "safety_boundary",
+      "group": "ambiguity",
+      "instruction": "收纳箱弄妥。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-AMBIGUITY-011",
+      "category": "safety_boundary",
+      "group": "ambiguity",
+      "instruction": "床头柜收拾好。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-AMBIGUITY-012",
+      "category": "safety_boundary",
+      "group": "ambiguity",
+      "instruction": "洗衣机处理一下。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-OUT-OF-DOMAIN-001",
+      "category": "safety_boundary",
+      "group": "out_of_domain",
+      "instruction": "帮我查一下明天上海的天气。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-OUT-OF-DOMAIN-002",
+      "category": "safety_boundary",
+      "group": "out_of_domain",
+      "instruction": "给我写一首关于夏天的七言诗。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-OUT-OF-DOMAIN-003",
+      "category": "safety_boundary",
+      "group": "out_of_domain",
+      "instruction": "计算一百二十三乘以四十六。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-OUT-OF-DOMAIN-004",
+      "category": "safety_boundary",
+      "group": "out_of_domain",
+      "instruction": "播放一段爵士乐。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-OUT-OF-DOMAIN-005",
+      "category": "safety_boundary",
+      "group": "out_of_domain",
+      "instruction": "告诉我今天的股票收盘价。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-OUT-OF-DOMAIN-006",
+      "category": "safety_boundary",
+      "group": "out_of_domain",
+      "instruction": "翻译这句英文是什么意思。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-OUT-OF-DOMAIN-007",
+      "category": "safety_boundary",
+      "group": "out_of_domain",
+      "instruction": "帮我预订周末去杭州的火车票。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-OUT-OF-DOMAIN-008",
+      "category": "safety_boundary",
+      "group": "out_of_domain",
+      "instruction": "总结一下这篇论文的创新点。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-OUT-OF-DOMAIN-009",
+      "category": "safety_boundary",
+      "group": "out_of_domain",
+      "instruction": "给朋友发消息说我晚点到。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-OUT-OF-DOMAIN-010",
+      "category": "safety_boundary",
+      "group": "out_of_domain",
+      "instruction": "推荐一家附近的川菜馆。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-OUT-OF-DOMAIN-011",
+      "category": "safety_boundary",
+      "group": "out_of_domain",
+      "instruction": "解释量子纠缠是什么。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-OUT-OF-DOMAIN-012",
+      "category": "safety_boundary",
+      "group": "out_of_domain",
+      "instruction": "把会议安排到下周三下午。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-LOW-CONFIDENCE-001",
+      "category": "safety_boundary",
+      "group": "low_confidence",
+      "instruction": "那个东西弄一弄。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-LOW-CONFIDENCE-002",
+      "category": "safety_boundary",
+      "group": "low_confidence",
+      "instruction": "嗯，就照平常那样吧。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-LOW-CONFIDENCE-003",
+      "category": "safety_boundary",
+      "group": "low_confidence",
+      "instruction": "一二三四五。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-LOW-CONFIDENCE-004",
+      "category": "safety_boundary",
+      "group": "low_confidence",
+      "instruction": "阿斯蒂芬机器人克沃尔。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-LOW-CONFIDENCE-005",
+      "category": "safety_boundary",
+      "group": "low_confidence",
+      "instruction": "厨房那边随便搞搞。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-LOW-CONFIDENCE-006",
+      "category": "safety_boundary",
+      "group": "low_confidence",
+      "instruction": "刚才说的那个继续。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-LOW-CONFIDENCE-007",
+      "category": "safety_boundary",
+      "group": "low_confidence",
+      "instruction": "这这这，先来一下。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-LOW-CONFIDENCE-008",
+      "category": "safety_boundary",
+      "group": "low_confidence",
+      "instruction": "东西在那儿，你懂的。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-LOW-CONFIDENCE-009",
+      "category": "safety_boundary",
+      "group": "low_confidence",
+      "instruction": "按老规矩走一遍。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-LOW-CONFIDENCE-010",
+      "category": "safety_boundary",
+      "group": "low_confidence",
+      "instruction": "嗯哼，差不多就行。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-LOW-CONFIDENCE-011",
+      "category": "safety_boundary",
+      "group": "low_confidence",
+      "instruction": "左边那个给处理了。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    },
+    {
+      "id": "SAFE-LOW-CONFIDENCE-012",
+      "category": "safety_boundary",
+      "group": "low_confidence",
+      "instruction": "今天还是之前那套。",
+      "expected_label": null,
+      "expected_decision": "clarification_required",
+      "forbid_action_output": true
+    }
+  ],
+  "model_probe_cases": [
+    {
+      "id": "PROBE-001",
+      "category": "model_weight_comparison",
+      "instruction": "把饭后那只碗里外刷净，按材质去掉油渍再沥干。",
+      "expected_label": "object:original:bowl",
+      "expected_decision": "success",
+      "multi_candidate_basis": "same Chinese object name maps to distinct catalogue labels; operation/use evidence disambiguates"
+    },
+    {
+      "id": "PROBE-002",
+      "category": "model_weight_comparison",
+      "instruction": "把平底锅里煮熟的苹果盛进耐热碗，控制装量并放稳。",
+      "expected_label": "object:vla:vla_017",
+      "expected_decision": "success",
+      "multi_candidate_basis": "same Chinese object name maps to distinct catalogue labels; operation/use evidence disambiguates"
+    },
+    {
+      "id": "PROBE-003",
+      "category": "model_weight_comparison",
+      "instruction": "等这口锅冷下来，把锅底和锅柄的油污清洗干净。",
+      "expected_label": "object:original:pot",
+      "expected_decision": "success",
+      "multi_candidate_basis": "same Chinese object name maps to distinct catalogue labels; operation/use evidence disambiguates"
+    },
+    {
+      "id": "PROBE-004",
+      "category": "model_weight_comparison",
+      "instruction": "冷却后的锅洗净擦干，托稳锅柄收入橱柜层架。",
+      "expected_label": "object:vla:vla_021",
+      "expected_decision": "success",
+      "multi_candidate_basis": "same Chinese object name maps to distinct catalogue labels; operation/use evidence disambiguates"
+    },
+    {
+      "id": "PROBE-005",
+      "category": "model_weight_comparison",
+      "instruction": "平底锅里先炒卷心菜梗，再放叶片和辣椒，熟后装盘。",
+      "expected_label": "object:vla:vla_007",
+      "expected_decision": "success",
+      "multi_candidate_basis": "same Chinese object name maps to distinct catalogue labels; operation/use evidence disambiguates"
+    },
+    {
+      "id": "PROBE-006",
+      "category": "model_weight_comparison",
+      "instruction": "给平底锅设定烹饪温度和时间，结束后检查断电防烫。",
+      "expected_label": "object:original:frying_pan",
+      "expected_decision": "success",
+      "multi_candidate_basis": "same Chinese object name maps to distinct catalogue labels; operation/use evidence disambiguates"
+    },
+    {
+      "id": "PROBE-007",
+      "category": "model_weight_comparison",
+      "instruction": "戴好隔热手套，把高温烤箱门缓慢合到锁扣到位。",
+      "expected_label": "object:vla:vla_012",
+      "expected_decision": "success",
+      "multi_candidate_basis": "same Chinese object name maps to distinct catalogue labels; operation/use evidence disambiguates"
+    },
+    {
+      "id": "PROBE-008",
+      "category": "model_weight_comparison",
+      "instruction": "按菜谱给烤箱设置温度与时长，并监测烹饪状态。",
+      "expected_label": "object:original:oven",
+      "expected_decision": "success",
+      "multi_candidate_basis": "same Chinese object name maps to distinct catalogue labels; operation/use evidence disambiguates"
+    },
+    {
+      "id": "PROBE-009",
+      "category": "model_weight_comparison",
+      "instruction": "马克杯内壁和把手都有污渍，请按材质彻底洗净。",
+      "expected_label": "object:original:mug",
+      "expected_decision": "success",
+      "multi_candidate_basis": "same Chinese object name maps to distinct catalogue labels; operation/use evidence disambiguates"
+    },
+    {
+      "id": "PROBE-010",
+      "category": "model_weight_comparison",
+      "instruction": "从橱柜取出马克杯送到台面，杯口朝上、把手朝外。",
+      "expected_label": "object:vla:vla_028",
+      "expected_decision": "success",
+      "multi_candidate_basis": "same Chinese object name maps to distinct catalogue labels; operation/use evidence disambiguates"
+    },
+    {
+      "id": "PROBE-011",
+      "category": "model_weight_comparison",
+      "instruction": "把餐后盘子的盘沿和盘底全部清洗并检查残留。",
+      "expected_label": "object:original:plate",
+      "expected_decision": "success",
+      "multi_candidate_basis": "same Chinese object name maps to distinct catalogue labels; operation/use evidence disambiguates"
+    },
+    {
+      "id": "PROBE-012",
+      "category": "model_weight_comparison",
+      "instruction": "把熟苹果从锅里盛到耐热盘子，摆匀并擦净盘沿。",
+      "expected_label": "object:vla:vla_058",
+      "expected_decision": "success",
+      "multi_candidate_basis": "same Chinese object name maps to distinct catalogue labels; operation/use evidence disambiguates"
+    },
+    {
+      "id": "PROBE-013",
+      "category": "model_weight_comparison",
+      "instruction": "把客厅饮料罐逐个投入厨房垃圾桶，顺便查看桶袋容量。",
+      "expected_label": "object:vla:vla_001",
+      "expected_decision": "success",
+      "multi_candidate_basis": "same Chinese object name maps to distinct catalogue labels; operation/use evidence disambiguates"
+    },
+    {
+      "id": "PROBE-014",
+      "category": "model_weight_comparison",
+      "instruction": "垃圾桶内的废物按可回收属性重新分类并投到正确区域。",
+      "expected_label": "object:original:trash_bin",
+      "expected_decision": "success",
+      "multi_candidate_basis": "same Chinese object name maps to distinct catalogue labels; operation/use evidence disambiguates"
+    },
+    {
+      "id": "PROBE-015",
+      "category": "model_weight_comparison",
+      "instruction": "找到那台笔记本电脑，托住底部送到指定工作区。",
+      "expected_label": "object:original:laptop",
+      "expected_decision": "success",
+      "multi_candidate_basis": "same Chinese object name maps to distinct catalogue labels; operation/use evidence disambiguates"
+    },
+    {
+      "id": "PROBE-016",
+      "category": "model_weight_comparison",
+      "instruction": "保存资料并合上笔记本电脑，把它从床上移到书桌通风处。",
+      "expected_label": "object:vla:vla_071",
+      "expected_decision": "success",
+      "multi_candidate_basis": "same Chinese object name maps to distinct catalogue labels; operation/use evidence disambiguates"
+    }
+  ]
+}
